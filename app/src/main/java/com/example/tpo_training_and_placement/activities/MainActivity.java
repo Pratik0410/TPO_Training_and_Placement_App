@@ -1,0 +1,127 @@
+package com.example.tpo_training_and_placement.activities;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.tpo_training_and_placement.R;
+import com.example.tpo_training_and_placement.activities.requestactivity.StudentRequestActivity;
+import com.example.tpo_training_and_placement.ui.AllActivitiesUi;
+import com.example.tpo_training_and_placement.ui.CompaniesUi;
+import com.example.tpo_training_and_placement.ui.CurrentCompaniesUi;
+import com.example.tpo_training_and_placement.ui.NoticeUi;
+import com.example.tpo_training_and_placement.ui.PrePlacementUi;
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle actionBarDrawerToggle;
+    public Button viewAllButton;
+    public CardView mainStudentRequestCardView;
+    public CardView mainNoticeCardView;
+    public CardView mainCurrentCompaniesCardView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // drawer layout instance to toggle the menu icon to open
+        // drawer and back button to close drawer
+        drawerLayout = findViewById(R.id.my_drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
+
+        // pass the Open and Close toggle for the drawer layout listener
+        // to toggle the button
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        // to make the Navigation drawer icon always appear on the action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.id_main_nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+
+        viewAllButton = findViewById(R.id.id_main_view_all);
+        mainStudentRequestCardView = findViewById(R.id.id_main_student_request);
+        mainNoticeCardView = findViewById(R.id.id_main_notice);
+        mainCurrentCompaniesCardView = findViewById(R.id.id_main_current_companies);
+
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#000000"));
+
+        actionBar.setBackgroundDrawable(colorDrawable);
+
+        viewAllButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, AllActivitiesUi.class);
+            startActivity(intent);
+        });
+
+        mainStudentRequestCardView.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, StudentRequestActivity.class))
+        );
+
+        mainNoticeCardView.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, NoticeUi.class))
+        );
+
+        mainCurrentCompaniesCardView.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, CurrentCompaniesUi.class))
+        );
+
+    }
+
+    // override the onOptionsItemSelected()
+    // function to implement
+    // the item click listener callback
+    // to open and close the navigation
+    // drawer when the icon is clicked
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return true;
+    }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_student_request:
+                startActivity(new Intent(MainActivity.this,StudentRequestActivity.class));
+                break;
+            case R.id.nav_notice:
+                startActivity(new Intent(MainActivity.this,NoticeUi.class));
+                break;
+            case R.id.nav_current_company:
+                startActivity(new Intent(MainActivity.this,CurrentCompaniesUi.class));
+                break;
+            case R.id.nav_companies:
+                startActivity(new Intent(MainActivity.this, CompaniesUi.class));
+                break;
+            case R.id.nav_pre_placement:
+                startActivity(new Intent(MainActivity.this, PrePlacementUi.class));
+                break;
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return false;
+    }
+}

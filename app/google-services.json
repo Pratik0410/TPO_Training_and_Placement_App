@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "863722340290",
+    "project_id": "tpo-training-and-placement",
+    "storage_bucket": "tpo-training-and-placement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863722340290:android:25820c6be3b0361c01e05b",
+        "android_client_info": {
+          "package_name": "com.example.tpo_training_and_placement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863722340290-s6ms3igkdcptfbqlfssthastbguljciu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNCoeHqIRl5jLQmGMPaQK6BfhZIwLVmT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863722340290-s6ms3igkdcptfbqlfssthastbguljciu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

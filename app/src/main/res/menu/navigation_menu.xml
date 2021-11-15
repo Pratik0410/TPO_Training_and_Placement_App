@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+
+    <item
+        android:id="@+id/nav_student_request"
+        android:title="Student Request" />
+
+    <item
+        android:id="@+id/nav_notice"
+        android:title="Notice" />
+
+    <item
+        android:id="@+id/nav_current_company"
+        android:title="List of Current Companies" />
+    <item
+        android:id="@+id/nav_companies"
+        android:title="List of Companies" />
+    <item
+        android:id="@+id/nav_pre_placement"
+        android:title="Pre-Placement" />
+    <item
+        android:id="@+id/nav_placement_history"
+        android:title="Placement History" />
+</menu>
