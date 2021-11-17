@@ -25,4 +25,5 @@
     <string name="username_textview">Username</string>
     <string name="contact_us_email_textview">kkwaghpolytechnicnsk@gmail.com</string>
     <string name="contact_us_name_textview">Prathamesh Sonawane</string>
+    <string name="hint_notification">Student/Everyone</string>
 </resources>
