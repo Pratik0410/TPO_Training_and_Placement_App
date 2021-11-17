@@ -10,12 +10,16 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import com.example.tpo_training_and_placement.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class SendNotificationToAllActivity extends AppCompatActivity {
@@ -24,6 +28,8 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
     public EditText enterNoticeEditText;
     public CardView notifyAllUiCardView;
     public Calendar calendar;
+    public Button sendButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,7 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
         dateEditText = findViewById(R.id.id_notify_all_date);
         enterNoticeEditText = findViewById(R.id.id_notify_all_notice);
         notifyAllUiCardView = findViewById(R.id.id_notification_card);
+        sendButton = findViewById(R.id.id_notify_all_send);
 
         calendar =Calendar.getInstance();
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
@@ -48,10 +55,12 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
             }
 
             private void updateCalender() {
-                String dateFormat = "dd/MM/yyyy";
+                String dateFormat = "dd-MM-yyyy";
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat, Locale.US);
                 dateEditText.setText(simpleDateFormat.format(calendar.getTime()));
             }
+
+
         };
 
         notifyAllUiCardView.setBackgroundResource(R.drawable.bottom_card_radius);
@@ -67,6 +76,18 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
         enterNoticeEditText.setOnClickListener(view ->
                 enterNoticeEditText.setTextColor(Color.BLACK)
         );
+
+
+        sendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference notifyall = database.getReference("Notice");
+                DatabaseReference notify1 = notifyall.child(dateEditText.getText().toString());
+                notify1.child("Notice").setValue(enterNoticeEditText.getText().toString());
+
+            }
+        });
 
     }
 }
