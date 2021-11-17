@@ -14,5 +14,6 @@ public class SentNotificationModel extends AppCompatActivity {
         setContentView(R.layout.model_sent_notification);
 
         getSupportActionBar().hide();
+
     }
 }
