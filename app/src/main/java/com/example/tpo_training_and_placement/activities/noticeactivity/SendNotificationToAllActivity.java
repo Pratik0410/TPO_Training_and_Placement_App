@@ -1,15 +1,10 @@
 package com.example.tpo_training_and_placement.activities.noticeactivity;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -19,8 +14,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 
 public class SendNotificationToAllActivity extends AppCompatActivity {
 
@@ -36,7 +31,7 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_notification_to_all);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         dateEditText = findViewById(R.id.id_notify_all_date);
         enterNoticeEditText = findViewById(R.id.id_notify_all_notice);
@@ -65,12 +60,9 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
 
         notifyAllUiCardView.setBackgroundResource(R.drawable.bottom_card_radius);
 
-        dateEditText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dateEditText.setTextColor(Color.BLACK);
-                new DatePickerDialog(SendNotificationToAllActivity.this,dateSetListener,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
-            }
+        dateEditText.setOnClickListener(view -> {
+            dateEditText.setTextColor(Color.BLACK);
+            new DatePickerDialog(SendNotificationToAllActivity.this,dateSetListener,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
         });
 
         enterNoticeEditText.setOnClickListener(view ->
@@ -78,15 +70,12 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
         );
 
 
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference notifyall = database.getReference("Notice");
-                DatabaseReference notify1 = notifyall.child(dateEditText.getText().toString());
-                notify1.child("Notice").setValue(enterNoticeEditText.getText().toString());
+        sendButton.setOnClickListener(view -> {
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference notifyall = database.getReference("Notice");
+            DatabaseReference notify1 = notifyall.child(dateEditText.getText().toString());
+            notify1.child("Notice").setValue(enterNoticeEditText.getText().toString());
 
-            }
         });
 
     }
