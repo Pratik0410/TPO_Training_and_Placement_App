@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.requestactivity.StudentRequestActivity;
@@ -24,6 +25,9 @@ import com.example.tpo_training_and_placement.ui.CurrentCompaniesUi;
 import com.example.tpo_training_and_placement.ui.NoticeUi;
 import com.example.tpo_training_and_placement.ui.PrePlacementUi;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
 
         // to make the Navigation drawer icon always appear on the action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.id_main_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -117,6 +121,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_pre_placement:
                 startActivity(new Intent(MainActivity.this, PrePlacementUi.class));
+                break;
+            case R.id.nav_logout:
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
                 break;
         }
 
