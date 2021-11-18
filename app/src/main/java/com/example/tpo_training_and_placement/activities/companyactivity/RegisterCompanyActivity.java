@@ -26,6 +26,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterCompanyActivity.this, CompaniesUi.class));
+                finish();
             }
         });
 
