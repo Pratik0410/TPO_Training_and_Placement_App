@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     public EditText usernameEditText;
     public EditText passwordEditText;
     public FirebaseAuth mAuth;
-
+    public FirebaseUser adminUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.id_username);
         passwordEditText = findViewById(R.id.id_password);
         mAuth = FirebaseAuth.getInstance();
+        adminUser = mAuth.getCurrentUser();
 
         ActionBar actionBar;
         actionBar = getSupportActionBar();
@@ -44,6 +45,12 @@ public class LoginActivity extends AppCompatActivity {
 
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
+
+        if(adminUser!=null){
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            finish();
+        }
+
     }
 
     public void afterLogin(View view){

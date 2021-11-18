@@ -15,5 +15,6 @@ public class SentNotificationModel extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+
     }
 }
