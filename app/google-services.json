@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "863722340290",
+    "firebase_url": "https://tpo-training-and-placement-default-rtdb.firebaseio.com",
     "project_id": "tpo-training-and-placement",
     "storage_bucket": "tpo-training-and-placement.appspot.com"
   },

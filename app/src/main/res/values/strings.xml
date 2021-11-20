@@ -26,4 +26,6 @@
     <string name="contact_us_email_textview">kkwaghpolytechnicnsk@gmail.com</string>
     <string name="contact_us_name_textview">Prathamesh Sonawane</string>
     <string name="hint_notification">Student/Everyone</string>
+    <string name="select_todays_date">Select Today\'s Date</string>
+    <string name="update_button">update</string>
 </resources>

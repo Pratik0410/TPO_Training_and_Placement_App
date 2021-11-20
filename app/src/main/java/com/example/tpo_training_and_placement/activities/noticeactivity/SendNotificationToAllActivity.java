@@ -3,18 +3,22 @@ package com.example.tpo_training_and_placement.activities.noticeactivity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import com.example.tpo_training_and_placement.R;
+import com.example.tpo_training_and_placement.ui.NoticeUi;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 
 public class SendNotificationToAllActivity extends AppCompatActivity {
@@ -73,8 +77,14 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
         sendButton.setOnClickListener(view -> {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference notifyall = database.getReference("Notice");
-            DatabaseReference notify1 = notifyall.child(dateEditText.getText().toString());
-            notify1.child("Notice").setValue(enterNoticeEditText.getText().toString());
+
+            Map data = new HashMap();
+            data.put("Date", dateEditText.getText().toString());
+            data.put("Notice", enterNoticeEditText.getText().toString());
+            notifyall.child(dateEditText.getText().toString()).setValue(data);
+
+            startActivity(new Intent(SendNotificationToAllActivity.this, NoticeUi.class));
+            finish();
 
         });
 

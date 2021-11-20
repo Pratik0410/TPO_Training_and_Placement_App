@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO_Training_and_Placement">
         <activity
-            android:name=".models.SentNotificationModel"
-            android:exported="false" />
-        <activity
             android:name=".activities.preplacementactivity.PreviousPrePlacementTalksActivity"
             android:exported="false" />
         <activity
