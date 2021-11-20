@@ -32,6 +32,7 @@ public class CurrentCompaniesUi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CurrentCompaniesUi.this, RegisterCurrentCompanyActivity.class));
+                finish();
             }
         });
 
