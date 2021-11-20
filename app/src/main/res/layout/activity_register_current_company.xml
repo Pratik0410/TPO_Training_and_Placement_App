@@ -53,6 +53,7 @@
           android:orientation="vertical">
 
         <EditText
+            android:id="@+id/id_company_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -78,6 +79,7 @@
               android:orientation="vertical">
 
             <EditText
+                android:id="@+id/id_company_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -89,11 +91,11 @@
                                                             Role
                                                                     Elegibility Criteria
                                                                     Registration/Apply Link"
+                android:importantForAutofill="no"
                 android:inputType="textMultiLine"
                 android:padding="15dp"
                 android:textColorHint="#A63A3535"
-                android:textSize="20sp"
-                android:importantForAutofill="no" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/id_register_current_company_button"

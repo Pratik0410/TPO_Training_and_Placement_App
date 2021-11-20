@@ -1,20 +1,35 @@
 package com.example.tpo_training_and_placement.models;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.util.Log;
 
-import android.os.Bundle;
+public class SentNotificationModel {
 
-import com.example.tpo_training_and_placement.R;
+    private String dateString;
+    private String noticeString;
 
-public class SentNotificationModel extends AppCompatActivity {
+    public SentNotificationModel() {
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.model_sent_notification);
+    public SentNotificationModel(String dateString, String noticeString) {
+        this.dateString = dateString;
+        this.noticeString = noticeString;
+    }
 
-        getSupportActionBar().hide();
+    public String getDateString() {
 
+        return dateString;
+    }
 
+    public void setDateString(String dateString) {
+        this.dateString = dateString;
+    }
+
+    public String getNoticeString() {
+        return noticeString;
+    }
+
+    public void setNoticeString(String noticeString) {
+        this.noticeString = noticeString;
     }
 }
+

@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/activity_register_current_company.xml" value="0.24320652173913043" />
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/activity_sent_notifications.xml" value="0.24320652173913043" />
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/data_current_companies.xml" value="0.2341485507246377" />
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/model_company_registration.xml" value="0.2341485507246377" />
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/model_current_company_registrarion_card.xml" value="0.2341485507246377" />
+        <entry key="..\:/Tanmay/CPP/TPO/app/src/main/res/layout/model_sent_notification.xml" value="0.24320652173913043" />
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/layout/model_sent_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/layout/ui_current_companies.xml" value="0.25416666666666665" />
