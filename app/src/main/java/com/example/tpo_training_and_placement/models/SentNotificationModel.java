@@ -1,35 +1,33 @@
 package com.example.tpo_training_and_placement.models;
 
-import android.util.Log;
-
 public class SentNotificationModel {
 
-    private String dateString;
-    private String noticeString;
+    private String Date;
+    private String Notice;
 
     public SentNotificationModel() {
     }
 
     public SentNotificationModel(String dateString, String noticeString) {
-        this.dateString = dateString;
-        this.noticeString = noticeString;
+        this.Date = dateString;
+        this.Notice = noticeString;
     }
 
-    public String getDateString() {
+    public String getDate() {
 
-        return dateString;
+        return Date;
     }
 
-    public void setDateString(String dateString) {
-        this.dateString = dateString;
+    public void setDate(String date) {
+        this.Date = date;
     }
 
-    public String getNoticeString() {
-        return noticeString;
+    public String getNotice() {
+        return Notice;
     }
 
-    public void setNoticeString(String noticeString) {
-        this.noticeString = noticeString;
+    public void setNotice(String notice) {
+        this.Notice = notice;
     }
 }
 
