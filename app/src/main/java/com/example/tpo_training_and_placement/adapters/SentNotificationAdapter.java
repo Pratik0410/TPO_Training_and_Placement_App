@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.models.SentNotificationModel;
-import com.example.tpo_training_and_placement.models.SentNotificationModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -22,8 +21,8 @@ public class SentNotificationAdapter extends FirebaseRecyclerAdapter<SentNotific
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull SentNotificationModel model) {
-        holder.dateTextView.setText(model.getDateString());
-        holder.noticeTextView.setText(model.getNoticeString());
+        holder.dateTextView.setText(model.getDate());
+        holder.noticeTextView.setText(model.getNotice());
     }
 
     @NonNull
