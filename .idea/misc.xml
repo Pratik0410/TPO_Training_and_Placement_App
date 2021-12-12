@@ -21,11 +21,25 @@
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/layout/model_sent_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/layout/ui_current_companies.xml" value="0.25416666666666665" />
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_add_placement_history_data.xml" value="0.22" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_add_placement_history_year.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_add_pre_placement_talk.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_previous_pre_placement_talks.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_register_company.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_register_current_company.xml" value="0.15760869565217392" />
         <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_send_notification_to_all.xml" value="0.12771739130434784" />
         <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/activity_send_student_notification.xml" value="0.12771739130434784" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/data_current_companies.xml" value="0.1921875" />
         <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/data_student_notification.xml" value="0.12771739130434784" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/model_current_company_registrarion_card.xml" value="0.15760869565217392" />
         <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/model_sent_notification.xml" value="0.25" />
         <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/model_student_notification_card.xml" value="0.12771739130434784" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/select_year.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/ui_all_activities.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/ui_companies.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/ui_current_companies.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/ui_placement_history.xml" value="0.15760869565217392" />
+        <entry key="..\:/nishu/diploma/TPO/app/src/main/res/layout/ui_pre_placement.xml" value="0.15760869565217392" />
       </map>
     </option>
   </component>

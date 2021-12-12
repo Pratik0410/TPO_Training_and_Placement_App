@@ -28,7 +28,24 @@
     <string name="hint_notification">Student/Everyone</string>
     <string name="select_todays_date">Select Today\'s Date</string>
     <string name="update_button">update</string>
+    <string name="hint_select_year">Select Year</string>
+    <string name="Placement_year_textview">Placement Year</string>
+    <string name="artificial_intelligence_machine_learning_checkbox">AI/ML</string>
+    <string name="civil_enigineering_checkbox">CE</string>
+    <string name="chemical_engineering_checkbox">CH</string>
+    <string name="computer_technology_checkbox">CML</string>
+    <string name="mechanical_engineering_checkbox">ME</string>
+    <string name="information_technology_checkbox">IT</string>
+    <string name="electrical_engineering_checkbox">EJ</string>
+    <string name="hint_number_of_students_placed">No.of Students Placed</string>
+
     <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="send_to">Send To...</string>
+    <string name="hint_year">Year</string>
+    <string name="placement_data_textview">Placement Data</string>
+    <string name="hint_average_lpa">Average LPA</string>
+    <string name="hint_total_lpa">Total LPA</string>
+    <string name="history_textview">History</string>
 </resources>
