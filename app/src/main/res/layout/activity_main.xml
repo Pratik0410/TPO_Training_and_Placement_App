@@ -203,19 +203,20 @@
                 app:cardElevation="10dp">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="end"
-                    app:srcCompat="@drawable/current_companies" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="15dp"
+                    app:srcCompat="@drawable/placement_opportunity" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37dp"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginBottom="40dp"
                     android:fontFamily="@font/abhaya_libre"
-                    android:text="List of Current "
+                    android:text="@string/placement"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -225,9 +226,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="35dp"
                     android:fontFamily="@font/abhaya_libre"
-                    android:text="Companies"
+                    android:text="@string/opportunity_textview"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold" />
