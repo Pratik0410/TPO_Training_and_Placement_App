@@ -129,6 +129,7 @@
                     android:background="@drawable/text_corner_radius"
 
                     android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/summary_eg_hint"
                     android:inputType="textMultiLine"
                     android:padding="15dp"
                     android:textColorHint="#A63A3535"
@@ -153,11 +154,11 @@
                     android:background="@drawable/text_corner_radius"
 
                     android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/key_qualification_eg_hint"
                     android:inputType="textMultiLine"
                     android:padding="15dp"
                     android:textColorHint="#A63A3535"
                     android:textSize="20sp" />
-
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
@@ -177,6 +178,7 @@
                     android:background="@drawable/text_corner_radius"
 
                     android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/description_eg_hint"
                     android:inputType="textMultiLine"
                     android:padding="15dp"
                     android:textColorHint="#A63A3535"
@@ -201,6 +203,32 @@
                     android:background="@drawable/text_corner_radius"
 
                     android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/additional_requirements_eg_hint"
+                    android:inputType="textMultiLine"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:text="@string/apply_here_textview"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/text_corner_radius"
+
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/apply_for_job_eg_hint"
                     android:inputType="textMultiLine"
                     android:padding="15dp"
                     android:textColorHint="#A63A3535"
