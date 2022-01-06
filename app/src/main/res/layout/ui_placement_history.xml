@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/id_ui_current_companies"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ph1" />
+        app:srcCompat="@drawable/ui_placement_history" />
 
     <TextView
         android:id="@+id/textView"

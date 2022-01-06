@@ -17,7 +17,6 @@ public class PlacementHistoryUi extends AppCompatActivity {
     public CardView placementHistoryYearUiCardView;
     public ImageButton addPlacementHistoryImageButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
