@@ -67,6 +67,9 @@
     <string name="additional_requirements_eg_hint">The IA team work with people all over Apple: interface designers, industrial designers, product development, other prototyping groups, technologists, engineers, marketing and executives. The team exists in a multidisciplinary studio environment and participates in individual and group reviews. IA are here to spark inspiration and conversation with their prototypes and then collaborate with other teams at Apple for execution and implementation. We bring ideas to the table and ideas to life.</string>
     <string name="apply_here_textview">Apply Here</string>
     <string name="apply_for_job_eg_hint">Link for Applying Job</string>
+    <string name="about_hint">About</string>
+    <string name="management_contact_hint">Management Contact</string>
+    <string name="product_or_service_based_company">Product/Service of that Company</string>
 
 
 </resources>
