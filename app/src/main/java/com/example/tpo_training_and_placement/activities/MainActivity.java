@@ -13,16 +13,17 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.requestactivity.StudentRequestActivity;
 import com.example.tpo_training_and_placement.ui.AllActivitiesUi;
 import com.example.tpo_training_and_placement.ui.CompaniesUi;
+import com.example.tpo_training_and_placement.ui.ContactUsUi;
 import com.example.tpo_training_and_placement.ui.CurrentCompaniesUi;
 import com.example.tpo_training_and_placement.ui.NoticeUi;
+import com.example.tpo_training_and_placement.ui.PlacementHistoryUi;
+import com.example.tpo_training_and_placement.ui.PlacementOpportunityUi;
 import com.example.tpo_training_and_placement.ui.PrePlacementUi;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         );
 
         mainCurrentCompaniesCardView.setOnClickListener(view ->
-                startActivity(new Intent(MainActivity.this, CurrentCompaniesUi.class))
+                startActivity(new Intent(MainActivity.this, PlacementOpportunityUi.class))
         );
 
     }
@@ -113,14 +114,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_notice:
                 startActivity(new Intent(MainActivity.this,NoticeUi.class));
                 break;
-            case R.id.nav_current_company:
-                startActivity(new Intent(MainActivity.this,CurrentCompaniesUi.class));
+            case R.id.nav_placement_opportunities:
+                startActivity(new Intent(MainActivity.this,PlacementOpportunityUi.class));
                 break;
             case R.id.nav_companies:
                 startActivity(new Intent(MainActivity.this, CompaniesUi.class));
                 break;
             case R.id.nav_pre_placement:
                 startActivity(new Intent(MainActivity.this, PrePlacementUi.class));
+                break;
+            case R.id.nav_placement_history:
+                startActivity(new Intent(MainActivity.this, PlacementHistoryUi.class));
+                break;
+            case R.id.nav_contact_us:
+                startActivity(new Intent(MainActivity.this, ContactUsUi.class));
                 break;
             case R.id.nav_logout:
                 FirebaseAuth.getInstance().signOut();
