@@ -13,8 +13,8 @@
         android:title="Notice" />
 
     <item
-        android:id="@+id/nav_current_company"
-        android:title="List of Current Companies" />
+        android:id="@+id/nav_placement_opportunities"
+        android:title="Placement Opportunities" />
     <item
         android:id="@+id/nav_companies"
         android:title="List of Companies" />
@@ -24,6 +24,9 @@
     <item
         android:id="@+id/nav_placement_history"
         android:title="Placement History" />
+    <item
+        android:id="@+id/nav_contact_us"
+        android:title="Contact Us" />
     <item
         android:id="@+id/nav_logout"
         android:title="Logout" />
