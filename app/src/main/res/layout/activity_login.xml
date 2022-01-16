@@ -33,33 +33,53 @@
             android:textColor="@color/black"
             android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/id_username"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/text_corner_radius"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
             android:hint="@string/username_textview"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:padding="10dp"
-            android:textColorHint="#660B0B0B"
-            android:textSize="18sp" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_username"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@color/black"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#660B0B0B"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            android:hint="Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/id_password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/text_corner_radius"
-            android:hint="Password"
             android:inputType="textPassword"
+            android:textCursorDrawable="@color/black"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#660B0B0B"
             android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/id_login"
