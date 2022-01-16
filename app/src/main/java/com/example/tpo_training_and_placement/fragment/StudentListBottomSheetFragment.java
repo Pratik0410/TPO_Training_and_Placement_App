@@ -3,12 +3,15 @@ package com.example.tpo_training_and_placement.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToStudentActivity;
@@ -30,10 +33,9 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
     private String mParam1;
     private String mParam2;
 
-    public Button backpressButton;
+    public ImageButton backPressImageButton;
 
     public StudentListBottomSheetFragment() {
-
         // Required empty public constructor
     }
 
@@ -47,7 +49,6 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
      */
     // TODO: Rename and change types and number of parameters
     public static StudentListBottomSheetFragment newInstance(String param1, String param2) {
-
         StudentListBottomSheetFragment fragment = new StudentListBottomSheetFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -62,22 +63,30 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        backpressButton = getView().findViewById(R.id.back_pressed_button);
-        backpressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_student_list_bottom_sheet, container, false);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        backPressImageButton = view.findViewById(R.id.back_pressed_button);
+        backPressImageButton.setOnClickListener(view1 -> {
+            onStop();
+        });
+
+
+
     }
 }
