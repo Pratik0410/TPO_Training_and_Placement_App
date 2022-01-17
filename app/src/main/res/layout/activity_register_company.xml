@@ -41,29 +41,30 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/text_corner_radius"
-                android:ems="10"
+                app:hintTextColor="@color/black"
                 android:fontFamily="@font/abhaya_libre"
                 android:hint="@string/hint_company_name"
-                android:inputType="textPersonName"
-                android:padding="15dp"
-                android:textColorHint="#A63A3535"
-                android:textSize="20dp" />
+                app:boxStrokeColor="@color/black"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <Spinner
-                android:id="@+id/product_service_spinner_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/spinner_background_colour" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:textCursorDrawable="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -77,58 +78,116 @@
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/id_product_service_edit_text"
+                    <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/id_text_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abhaya_libre"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/id_auto_complete_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:hint="Type of Company"
+                        android:textColorHint="@color/black"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextField"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:background="#11501414"
+                        app:hintTextColor="@color/black"
+                        android:hint="Product/Service of Company"
                         android:fontFamily="@font/abhaya_libre"
-                        android:inputType="textMultiLine"
-                        android:padding="15dp"
-                        android:textColorHint="#A63A3535"
-                        android:textSize="20sp" />
+                        app:boxStrokeColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <EditText
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_product_service_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/abhaya_libre"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:padding="15dp"
+                            android:textColorHint="#A63A3535"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="20sp"
+                            app:boxStrokeColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-
-                        android:background="#11501414"
-                        android:fontFamily="@font/abhaya_libre"
+                        app:hintTextColor="@color/black"
                         android:hint="@string/about_hint"
-                        android:inputType="textMultiLine"
-                        android:padding="15dp"
-                        android:textColorHint="#A63A3535"
-                        android:textSize="20sp" />
+                        android:fontFamily="@font/abhaya_libre"
+                        app:boxStrokeColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <EditText
-                        android:id="@+id/editTextTextMultiLine7"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/abhaya_libre"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:padding="15dp"
+                            android:textColorHint="#A63A3535"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="20sp"
+                            app:boxStrokeColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-
-                        android:background="#11501414"
-                        android:fontFamily="@font/abhaya_libre"
+                        app:hintTextColor="@color/black"
                         android:hint="@string/management_contact_hint"
-                        android:inputType="textMultiLine"
-                        android:padding="15dp"
-                        android:textColorHint="#A63A3535"
-                        android:textSize="20sp" />
+                        android:fontFamily="@font/abhaya_libre"
+                        app:boxStrokeColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/abhaya_libre"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:padding="15dp"
+                            android:textColorHint="#A63A3535"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="20sp"
+                            app:boxStrokeColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
                         android:id="@+id/id_register_company_button"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
                         android:backgroundTint="@color/black"
                         android:fontFamily="@font/abhaya_libre"
                         android:text="@string/button_register"
-                        android:textSize="16sp"
-                        app:cornerRadius="20dp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </ScrollView>

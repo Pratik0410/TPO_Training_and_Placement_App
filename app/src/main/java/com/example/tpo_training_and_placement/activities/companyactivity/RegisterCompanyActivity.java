@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -14,28 +15,38 @@ import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.ui.CompaniesUi;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterCompanyActivity extends AppCompatActivity {
 
     public Button registerButton;
-    public Spinner productServiceSpinner;
-    public String[] productServiceArray = {"Type of Company","Product Based","Service Based","Both"};
+    public String[] productServiceArray = {"Product Based","Service Based","Both(Product & Service)"};
     public EditText productServiceEditText;
+    public TextInputLayout textInputLayout;
+    public AutoCompleteTextView autoCompleteTextView;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(RegisterCompanyActivity.this,R.layout.dropdownlist_item,productServiceArray);
+        autoCompleteTextView.setAdapter(arrayAdapter);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_company);
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(RegisterCompanyActivity.this,R.layout.support_simple_spinner_dropdown_item,productServiceArray);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(RegisterCompanyActivity.this,R.layout.dropdownlist_item,productServiceArray);
 
         getSupportActionBar().hide();
         registerButton = findViewById(R.id.id_register_company_button);
-        productServiceSpinner = findViewById(R.id.product_service_spinner_id);
         productServiceEditText = findViewById(R.id.id_product_service_edit_text);
+        textInputLayout = findViewById(R.id.id_text_input_layout);
+        autoCompleteTextView = findViewById(R.id.id_auto_complete_textview);
 
-        productServiceSpinner.setAdapter(arrayAdapter);
-        productServiceSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        autoCompleteTextView.setAdapter(arrayAdapter);
+        autoCompleteTextView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(productServiceArray[i] == "Product Based"){
