@@ -18,7 +18,7 @@
     <string name="add_textview">Add</string>
     <string name="previous_textview">Previous</string>
     <string name="add_pre_placement">Add Pre-Placement</string>
-    <string name="add_file">Add File</string>
+    <string name="add_file_button">Add File</string>
     <string name="submit_button">Submit</string>
     <string name="talks_textview">Talks</string>
     <string name="contact_us_textview">Contact Us</string>
@@ -70,6 +70,7 @@
     <string name="about_hint">About</string>
     <string name="management_contact_hint">Management Contact</string>
     <string name="product_or_service_based_company">Product/Service of that Company</string>
-
+    <string name="company_description_hint">Company Description</string>
+    <string name="link_for_pre_placement_talks_hint">Link for Pre-Placement Talks</string>
 
 </resources>

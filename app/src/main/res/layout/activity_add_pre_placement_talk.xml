@@ -36,88 +36,115 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="25dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
 
-                <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                app:hintTextColor="@color/black"
+                app:boxStrokeColor="@color/black"
+                android:hint="@string/hint_company_name"
+                android:fontFamily="@font/abhaya_libre"
+                android:textSize="30sp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/text_corner_radius"
                     android:ems="10"
                     android:fontFamily="@font/abhaya_libre"
-                    android:hint="@string/hint_company_name"
                     android:inputType="textPersonName"
                     android:padding="15dp"
-                    android:textColorHint="#A63A3535"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:textCursorDrawable="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                <ScrollView
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:hint="@string/company_description_hint"
+                        android:textSize="30sp"
+                        app:boxStrokeColor="@color/black"
+                        app:hintTextColor="@color/black">
 
-                        <EditText
+                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/text_corner_radius"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
                             android:fontFamily="@font/abhaya_libre"
-
-                            android:hint="Companies Description:
-                                                Company Details
-                                                No.of Students Placed
-
-                                                                    Company that visit your campus"
                             android:inputType="textMultiLine"
-                            android:padding="30dp"
-                            android:textColorHint="#A63A3535"
-                            android:textSize="20sp" />
+                            android:padding="15dp"
+                            android:textColorHint="@color/black"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="20dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    </LinearLayout>
-                </ScrollView>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:hint="@string/link_for_pre_placement_talks_hint"
+                        android:textSize="30sp"
+                        app:boxStrokeColor="@color/black"
+                        app:hintTextColor="@color/black">
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:fontFamily="@font/abhaya_libre"
+                            android:inputType="textPersonName"
+                            android:padding="15dp"
+                            android:textColorHint="@color/black"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="20dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:backgroundTint="@color/black"
-            android:text="@string/add_file" />
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="40dp"
+                        android:backgroundTint="@color/black"
+                        android:text="@string/submit_button" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:backgroundTint="@color/black"
-            android:text="@string/submit_button" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
