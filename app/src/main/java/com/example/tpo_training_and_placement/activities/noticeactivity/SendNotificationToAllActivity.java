@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.ui.NoticeUi;
 import com.google.firebase.database.DatabaseReference;
@@ -78,13 +80,19 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference notifyall = database.getReference("Notice");
 
-            Map data = new HashMap();
-            data.put("Date", dateEditText.getText().toString());
-            data.put("Notice", enterNoticeEditText.getText().toString());
-            notifyall.child(dateEditText.getText().toString()).setValue(data);
+            if(dateEditText.getText().toString().length() > 0 && enterNoticeEditText.getText().toString().length() > 0){
 
-            startActivity(new Intent(SendNotificationToAllActivity.this, NoticeUi.class));
-            finish();
+                Map data = new HashMap();
+                data.put("Date", dateEditText.getText().toString());
+                data.put("Notice", enterNoticeEditText.getText().toString());
+                notifyall.child(dateEditText.getText().toString()).setValue(data);
+
+                startActivity(new Intent(SendNotificationToAllActivity.this, NoticeUi.class));
+                finish();
+            }
+            else{
+                Toast.makeText(SendNotificationToAllActivity.this, "Please Fill All Details", Toast.LENGTH_SHORT).show();
+            }
 
         });
 
