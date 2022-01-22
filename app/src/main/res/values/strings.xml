@@ -49,8 +49,8 @@
     <string name="hint_total_lpa">Total LPA</string>
     <string name="history_textview">History</string>
     <string name="opportunity_textview">Opportunity</string>
-    <string name="jobopportunity_textview">Job Opportunity</string>
-    <string name="description_textview">Description</string>
+    <string name="job_opportunity_textview">Job Opportunity</string>
+    <string name="job_description_textview">Job Description</string>
     <string name="summary_textview">Summary</string>
     <string name="key_qualification_textview">Key Qualification</string>
     <string name="location_textview">Location</string>
@@ -68,9 +68,10 @@
     <string name="apply_here_textview">Apply Here</string>
     <string name="apply_for_job_eg_hint">Link for Applying Job</string>
     <string name="about_hint">About</string>
-    <string name="management_contact_hint">Management Contact</string>
+    <string name="contact_details_hint">Contact Details</string>
     <string name="product_or_service_based_company">Product/Service of that Company</string>
     <string name="company_description_hint">Company Description</string>
     <string name="link_for_pre_placement_talks_hint">Link for Pre-Placement Talks</string>
-
+    <string name="details_hint">Details</string>
+    <string name="link_for_applying_hint">Link for Applying</string>
 </resources>
