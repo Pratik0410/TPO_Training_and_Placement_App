@@ -42,12 +42,12 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
+                android:id="@+id/id_upload_company_logo_imageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/image1"
+                android:src="@drawable/ic_upload_image"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp" />
 
@@ -69,6 +69,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
                         android:hint="@string/hint_company_name"
+                        app:startIconDrawable="@drawable/ic_company_name"
                         app:boxStrokeColor="@color/black"
                         app:hintTextColor="@color/black">
 
@@ -85,11 +86,12 @@
                             app:boxStrokeColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/id_text_input_layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/abhaya_libre"
                     app:boxStrokeColor="@color/black"
                     app:hintTextColor="@color/black">
@@ -115,6 +117,7 @@
                         android:layout_marginTop="10dp"
                         app:hintTextColor="@color/black"
                         android:hint="Product/Service of Company"
+                        app:startIconDrawable="@drawable/ic_product"
                         android:fontFamily="@font/abhaya_libre"
                         app:boxStrokeColor="@color/black"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -141,6 +144,7 @@
                         android:layout_marginTop="10dp"
                         app:hintTextColor="@color/black"
                         android:hint="@string/about_hint"
+                        app:startIconDrawable="@drawable/ic_company_description"
                         android:fontFamily="@font/abhaya_libre"
                         app:boxStrokeColor="@color/black"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -165,7 +169,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         app:hintTextColor="@color/black"
-                        android:hint="@string/management_contact_hint"
+                        android:hint="@string/contact_details_hint"
+                        app:startIconDrawable="@drawable/ic_contact_details"
                         android:fontFamily="@font/abhaya_libre"
                         app:boxStrokeColor="@color/black"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -195,13 +200,8 @@
                         android:fontFamily="@font/abhaya_libre"
                         android:text="@string/button_register"
                         android:textSize="16sp" />
-
                 </LinearLayout>
             </ScrollView>
-
         </LinearLayout>
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
