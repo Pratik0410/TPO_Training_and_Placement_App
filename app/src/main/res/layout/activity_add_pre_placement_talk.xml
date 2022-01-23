@@ -45,38 +45,38 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="05dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="05dp"
                 android:layout_gravity="center"
                 app:hintTextColor="@color/black"
                 app:boxStrokeColor="@color/black"
                 android:hint="@string/hint_company_name"
+                app:startIconDrawable="@drawable/ic_company_name"
                 android:fontFamily="@font/abhaya_libre"
                 android:textSize="30sp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_company_name_edit_text_in_pre_placement"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:fontFamily="@font/abhaya_libre"
                     android:inputType="textPersonName"
                     android:padding="15dp"
-                    android:textSize="20dp"
+                    android:textColorHint="@color/black"
                     android:textCursorDrawable="@color/black"
-                    android:textColorHint="@color/black" />
+                    android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginTop="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -84,24 +84,25 @@
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginRight="05dp"
                         android:fontFamily="@font/abhaya_libre"
-                        android:hint="@string/company_description_hint"
+                        android:hint="@string/details_hint"
                         android:textSize="30sp"
                         app:boxStrokeColor="@color/black"
-                        app:hintTextColor="@color/black">
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_company_description">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_details_edit_text_in_pre_placement"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
                             android:fontFamily="@font/abhaya_libre"
                             android:inputType="textMultiLine"
                             android:padding="15dp"
                             android:textColorHint="@color/black"
                             android:textCursorDrawable="@color/black"
-                            android:textSize="20dp" />
+                            android:textSize="20sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -109,29 +110,30 @@
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="05dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="05dp"
                         android:fontFamily="@font/abhaya_libre"
                         android:hint="@string/link_for_pre_placement_talks_hint"
                         android:textSize="30sp"
                         app:boxStrokeColor="@color/black"
-                        app:hintTextColor="@color/black">
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_link">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_link_edit_text_in_pre_placement"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
                             android:fontFamily="@font/abhaya_libre"
                             android:inputType="textPersonName"
                             android:padding="15dp"
                             android:textColorHint="@color/black"
                             android:textCursorDrawable="@color/black"
-                            android:textSize="20dp" />
+                            android:textSize="20sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/id_submit_button_in_pre_placement"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"

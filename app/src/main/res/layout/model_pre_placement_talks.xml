@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_company_name_text_view_in_model_pre_placement_talks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_details_text_view_in_model_pre_placement_talks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_link_for_pre_placement_talk_text_view_in_model_pre_placement_talks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
