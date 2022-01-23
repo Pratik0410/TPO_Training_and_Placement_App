@@ -43,15 +43,6 @@
             android:name=".ui.CompaniesUi"
             android:exported="false" />
         <activity
-            android:name=".activities.currentcompanyactivity.RegisterCurrentCompanyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".data.CurrentCompaniesData"
-            android:exported="true" />
-        <activity
-            android:name=".ui.CurrentCompaniesUi"
-            android:exported="true" />
-        <activity
             android:name=".data.StudentNotificationData"
             android:exported="true" />
         <activity
