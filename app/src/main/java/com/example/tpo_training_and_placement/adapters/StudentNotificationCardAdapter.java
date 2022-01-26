@@ -28,8 +28,8 @@ public class StudentNotificationCardAdapter extends FirebaseRecyclerAdapter<Stud
     @NonNull
     @Override
     public StudentNotificationCardAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.model_current_company_registrarion_card,parent,false);
-        return new ViewHolder(view);
+       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.model_student_notification_card,parent,false);
+       return new ViewHolder(view);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
