@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/drawable/ic_additional_requirement.xml" value="0.183" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/drawable/ic_apply_here.xml" value="0.183" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.183" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.183" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/drawable/ic_company_name.xml" value="0.183" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout-v26/activity_job_opportunity.xml" value="0.19635416666666666" />
-        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_add_placement_opportunity.xml" value="0.17074275362318841" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_add_placement_opportunity.xml" value="0.25" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_add_pre_placement_talk.xml" value="0.14990942028985507" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_edit_placement_opportunity.xml" value="0.2" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_job_opportunity.xml" value="0.33" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_send_notification_to_all.xml" value="0.17074275362318841" />
@@ -14,6 +20,8 @@
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/model_company_registration_card.xml" value="0.17074275362318841" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/model_edit_placement_opportunity.xml" value="0.25" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/model_job_opportunity_card.xml" value="0.17074275362318841" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/model_pre_placement_talks.xml" value="0.35939196525515743" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/model_select_company_card.xml" value="0.22" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_notice.xml" value="0.19635416666666666" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_placement_opportunity.xml" value="0.25" />
         <entry key="..\:/TPO_Training_and_Placement/app/src/main/res/layout/activity_job_opportunity.xml" value="0.136" />
