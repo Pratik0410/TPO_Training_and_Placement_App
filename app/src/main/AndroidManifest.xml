@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tpo_training_and_placement">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO_Training_and_Placement">
         <activity
-            android:name=".activities.placementopportunity.JobOpportunityActivity"
+            android:name=".activities.placementopportunity.EditPlacementOpportunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".data.EditPlacementData"
+            android:exported="false" />
+        <activity
+            android:name=".data.SelectPlacementCompanyData"
+            android:exported="false" />
+        <activity
+            android:name=".activities.placementopportunity.AddPlacementOpportunityActivity"
             android:exported="false" />
         <activity
             android:name=".ui.PlacementOpportunityUi"
@@ -83,8 +95,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>

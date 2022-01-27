@@ -42,7 +42,7 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="send_to">Send To...</string>
+    <string name="send_to">Send To…</string>
     <string name="hint_year">Year</string>
     <string name="placement_data_textview">Placement Data</string>
     <string name="hint_average_lpa">Average LPA</string>
@@ -56,13 +56,13 @@
     <string name="location_textview">Location</string>
     <string name="state_textview">State</string>
     <string name="role_textview">Role</string>
-    <string name="additional_requirments_textview">Additional Requirements</string>
+    <string name="additional_requirements_textview">Additional Requirements</string>
     <string name="upload_button">Upload</string>
     <string name="company_name_eg_hint">Company Name : Apple</string>
     <string name="role_eg_hint">Systems Experience Engineer</string>
     <string name="location_eg_hint">Boulder,Colorado,United States</string>
-    <string name="summary_eg_hint">Posted : Nov 18,2021 <br/> Weekly Hours : 40 <br/> The Interaction Architecture team is searching for a Producer.In this role,you will help the team in organizing our explorations, connection and prototype development work.Your creative practice will be a balance of partnering and directing,i.e. be a coach that works both by watchful observation and active support.You will work closely with the team of foster and nurture ideas,help organize projects, prioritize our work,and be a connector to teams in the studio and across Apple.</string>
-    <string name="key_qualification_eg_hint"> \u25CF  Comfortable with ambiguous project goals  <br/> \u25CF  Provide structure and clarity where it’s needed <br/>\u25CF  Have a flexible approach to project planning a wide range of project types <br/>\u25CF  Experience with both technical and creative development <br/>\u25CF  Have experience in both hardware and software design projects <br/>\u25CF  Ability to foster and nurture the ideas of the team <br/>\u25CF  Have an affinity for Design and Tech <br/>\u25CF  Know how to motivate and align diverse groups of people <br/>\u25CF  Understand the practice of experience prototyping</string>
+    <string name="summary_eg_hint">Posted : Nov 18,2021 <br /> Weekly Hours : 40 <br /> The Interaction Architecture team is searching for a Producer.In this role,you will help the team in organizing our explorations, connection and prototype development work.Your creative practice will be a balance of partnering and directing,i.e. be a coach that works both by watchful observation and active support.You will work closely with the team of foster and nurture ideas,help organize projects, prioritize our work,and be a connector to teams in the studio and across Apple.</string>
+    <string name="key_qualification_eg_hint"> \u25CF  Comfortable with ambiguous project goals  <br /> \u25CF  Provide structure and clarity where it’s needed <br />\u25CF  Have a flexible approach to project planning a wide range of project types <br />\u25CF  Experience with both technical and creative development <br />\u25CF  Have experience in both hardware and software design projects <br />\u25CF  Ability to foster and nurture the ideas of the team <br />\u25CF  Have an affinity for Design and Tech <br />\u25CF  Know how to motivate and align diverse groups of people <br />\u25CF  Understand the practice of experience prototyping</string>
     <string name="description_eg_hint">The IA team work with people all over Apple: interface designers, industrial designers, product development, other prototyping groups, technologists, engineers, marketing and executives. The team exists in a multidisciplinary studio environment and participates in individual and group reviews. IA are here to spark inspiration and conversation with their prototypes and then collaborate with other teams at Apple for execution and implementation. We bring ideas to the table and ideas to life.</string>
     <string name="additional_requirements_eg_hint">The IA team work with people all over Apple: interface designers, industrial designers, product development, other prototyping groups, technologists, engineers, marketing and executives. The team exists in a multidisciplinary studio environment and participates in individual and group reviews. IA are here to spark inspiration and conversation with their prototypes and then collaborate with other teams at Apple for execution and implementation. We bring ideas to the table and ideas to life.</string>
     <string name="apply_here_textview">Apply Here</string>
@@ -74,4 +74,12 @@
     <string name="link_for_pre_placement_talks_hint">Link for Pre-Placement Talks</string>
     <string name="details_hint">Details</string>
     <string name="link_for_applying_hint">Link for Applying</string>
+    <string name="placement_opportunities_image_of_ui_content_description">Placement Opportunities Image of Ui</string>
+    <string name="edit_text">Edit</string>
+    <string name="placement_text">Placement</string>
+    <string name="opportunities_text">Opportunities</string>
+    <string name="add_text">Add</string>
+    <string name="arrow_back_of_data_select_placement_opportunity">Arrow Back of Data Select Placement Opportunity</string>
+    <string name="select_company_text">Select Company</string>
+    <string name="delete_button">Delete</string>
 </resources>
