@@ -2,10 +2,8 @@ package com.example.tpo_training_and_placement.activities.companyactivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,8 +18,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.adapters.RegisteredCompanyAdapter;
-import com.example.tpo_training_and_placement.ui.CompaniesUi;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,7 +25,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.karumi.dexter.Dexter;
@@ -42,6 +37,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class RegisterCompanyActivity extends AppCompatActivity {
 
@@ -50,11 +46,11 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     public TextInputEditText companyNameTextInputEditText, productServiceTextInputEditText, aboutTextInputEditText, contactDetailsTextInputEditText;
     public TextInputLayout textInputLayout;
     public AutoCompleteTextView typeOfCompanyAutoCompleteTextView;
-    public ImageView companyimageView;
+    public ImageView companyImageView;
     public Uri filepath;
     public Bitmap bitmap;
-    public int flagToChkUploadingImage=0;
-    public int productservice;
+    public int flagToCheckUploadingImage =0;
+    public int productService;
 
 
     @Override
@@ -71,7 +67,8 @@ public class RegisterCompanyActivity extends AppCompatActivity {
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(RegisterCompanyActivity.this,R.layout.dropdownlist_item,productServiceArray);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
         registerButton = findViewById(R.id.id_register_company_button);
         companyNameTextInputEditText = findViewById(R.id.id_company_name_edit_text_in_register_company);
         productServiceTextInputEditText = findViewById(R.id.id_product_service_edit_text);
@@ -79,14 +76,14 @@ public class RegisterCompanyActivity extends AppCompatActivity {
         contactDetailsTextInputEditText = findViewById(R.id.id_contact_details_edit_text_in_register_company);
         textInputLayout = findViewById(R.id.id_text_input_layout);
         typeOfCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview);
-        companyimageView = findViewById(R.id.id_upload_company_logo_imageview);
+        companyImageView = findViewById(R.id.id_upload_company_logo_imageview);
 
         typeOfCompanyAutoCompleteTextView.setAdapter(arrayAdapter);
 
         typeOfCompanyAutoCompleteTextView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                productservice = position;
+                productService = position;
             }
 
             @Override
@@ -95,7 +92,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
             }
         });
 
-        companyimageView.setOnClickListener(new View.OnClickListener() {
+        companyImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Dexter.withActivity(RegisterCompanyActivity.this)
@@ -128,11 +125,10 @@ public class RegisterCompanyActivity extends AppCompatActivity {
 
         registerButton.setOnClickListener(view -> {
 
-
             if (companyNameTextInputEditText.getText().toString().length() !=0 && typeOfCompanyAutoCompleteTextView.getText().toString().length() != 0 && productServiceTextInputEditText.getText().toString().length() !=0
             && aboutTextInputEditText.getText().toString().length() !=0 && contactDetailsTextInputEditText.getText().toString().length() !=0) {
 
-                if (flagToChkUploadingImage == 5) {
+                if (flagToCheckUploadingImage == 5) {
                     FirebaseStorage storage = FirebaseStorage.getInstance();//image1 is your image name
                     StorageReference uploader = storage.getReference().child(companyNameTextInputEditText.getText().toString());
 
@@ -144,6 +140,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                                     result.addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {
+
                                             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                                             DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
 
@@ -159,9 +156,6 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                                     });
                                 }
                             });
-
-
-                    startActivity(new Intent(RegisterCompanyActivity.this, CompaniesUi.class));
                     finish();
                 } else {
                     Toast.makeText(RegisterCompanyActivity.this, "Please Select Image", Toast.LENGTH_SHORT).show();
@@ -179,17 +173,15 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     {
         if(requestCode==1 && resultCode==RESULT_OK)
         {
-            filepath=data.getData();//filepath is nothing but a selected image url
+            filepath=data.getData();
             try
             {
                 InputStream inputStream=getContentResolver().openInputStream(filepath);
                 bitmap= BitmapFactory.decodeStream(inputStream);
-                companyimageView.setImageBitmap(bitmap);
-                flagToChkUploadingImage=5;
-
+                companyImageView.setImageBitmap(bitmap);
+                flagToCheckUploadingImage =5;
             }catch (Exception ex)
             {
-
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -198,7 +190,6 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(RegisterCompanyActivity.this, CompaniesUi.class));
         finish();
     }
 }
