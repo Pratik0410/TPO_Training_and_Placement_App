@@ -82,4 +82,8 @@
     <string name="arrow_back_of_data_select_placement_opportunity">Arrow Back of Data Select Placement Opportunity</string>
     <string name="select_company_text">Select Company</string>
     <string name="delete_button">Delete</string>
+    <string name="existing_text">Existing</string>
+    <string name="company_text">Company</string>
+    <string name="arrow_back_image_button_in_activity_add_placement_opportunity">Arrow Back ImageButton in Add Placement Opportunity</string>
+    <string name="notice_text">Notice</string>
 </resources>

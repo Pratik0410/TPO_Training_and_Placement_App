@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
@@ -25,6 +26,7 @@ public class AddPrePlacementTalkActivity extends AppCompatActivity {
     public TextInputEditText detailsTextInputEditText;
     public TextInputEditText linkTextInputEditText;
     public Button submitButton;
+    public ImageButton arrowBackImageButton;
     public String dateString;
     public Calendar calendar;
     public SimpleDateFormat simpleDateFormat;
@@ -40,6 +42,7 @@ public class AddPrePlacementTalkActivity extends AppCompatActivity {
         detailsTextInputEditText = findViewById(R.id.id_details_edit_text_in_pre_placement);
         linkTextInputEditText = findViewById(R.id.id_link_edit_text_in_pre_placement);
         submitButton = findViewById(R.id.id_submit_button_in_pre_placement);
+        arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_add_pre_placement_talk);
 
         submitButton.setOnClickListener(view -> {
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -64,8 +67,9 @@ public class AddPrePlacementTalkActivity extends AppCompatActivity {
             else {
                 Toast.makeText(AddPrePlacementTalkActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
             }
-
         });
+
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
     }
 }

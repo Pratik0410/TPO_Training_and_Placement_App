@@ -5,19 +5,14 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.activities.companyactivity.RegisterCompanyActivity;
-import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToAllActivity;
 import com.example.tpo_training_and_placement.activities.preplacementactivity.AddPrePlacementTalkActivity;
-import com.example.tpo_training_and_placement.activities.preplacementactivity.PreviousPrePlacementTalksActivity;
+import com.example.tpo_training_and_placement.data.PreviousPrePlacementTalksData;
 
 public class PrePlacementUi extends AppCompatActivity {
 
     public CardView prePlacementUiCardView;
-    public ImageButton addPrePlacementyImageButton;
     public CardView addPrePlacementTalksCardView;
     public CardView previousPrePlacementTalksCardView;
 
@@ -39,7 +34,7 @@ public class PrePlacementUi extends AppCompatActivity {
         );
 
         previousPrePlacementTalksCardView.setOnClickListener(view ->
-                startActivity(new Intent(PrePlacementUi.this, PreviousPrePlacementTalksActivity.class))
+                startActivity(new Intent(PrePlacementUi.this, PreviousPrePlacementTalksData.class))
         );
 
     }
