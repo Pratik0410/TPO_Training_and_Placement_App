@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO_Training_and_Placement">
         <activity
+            android:name=".data.EditCompanyData"
+            android:exported="false" />
+        <activity
             android:name=".activities.placementopportunity.EditPlacementOpportunityActivity"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
             android:name=".activities.placementhistoryactivity.AddPlacementHistoryYearActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.preplacementactivity.PreviousPrePlacementTalksActivity"
+            android:name=".data.PreviousPrePlacementTalksData"
             android:exported="false" />
         <activity
             android:name=".activities.placementhistoryactivity.AddPlacementHistoryDataActivity"
@@ -61,7 +64,7 @@
             android:name=".activities.noticeactivity.SendNotificationToStudentActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.noticeactivity.SentNotificationsActivity"
+            android:name=".data.SentNotificationsData"
             android:exported="true" />
         <activity
             android:name=".activities.noticeactivity.SendNotificationToAllActivity"
