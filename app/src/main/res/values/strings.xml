@@ -86,4 +86,5 @@
     <string name="company_text">Company</string>
     <string name="arrow_back_image_button_in_activity_add_placement_opportunity">Arrow Back ImageButton in Add Placement Opportunity</string>
     <string name="notice_text">Notice</string>
+    <string name="add_placement_opportunity_text">Add Placement Opportunity</string>
 </resources>
