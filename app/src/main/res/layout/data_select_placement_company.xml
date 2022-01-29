@@ -53,6 +53,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_select_company_recycler_view_in_data_select_company"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
