@@ -69,7 +69,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        registerButton = findViewById(R.id.id_register_company_button);
+        registerButton = findViewById(R.id.id_upload_button_in_activity_add_placement_opportunity);
         companyNameTextInputEditText = findViewById(R.id.id_company_name_edit_text_in_register_company);
         productServiceTextInputEditText = findViewById(R.id.id_product_service_edit_text);
         aboutTextInputEditText = findViewById(R.id.id_about_edit_text_in_register_company);

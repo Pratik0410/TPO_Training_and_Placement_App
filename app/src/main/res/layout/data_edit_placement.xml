@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".data.EditPlacementData">
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/black"
@@ -43,4 +45,10 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_edit_company_recycler_view_in_data_edit_placement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
