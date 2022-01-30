@@ -8,8 +8,8 @@ import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.errorhandling.WrapContentLinearLayoutManager;
-import com.example.tpo_training_and_placement.adapters.PlacementOpportunityAdapter;
-import com.example.tpo_training_and_placement.models.PlacementOpportunityModel;
+import com.example.tpo_training_and_placement.adapters.AddPlacementOpportunityAdapter;
+import com.example.tpo_training_and_placement.models.AddPlacementOpportunityModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,7 +19,7 @@ public class SelectPlacementCompanyData extends AppCompatActivity {
 
     public ImageButton arrowBackImageButton;
     public RecyclerView selectCompanyRecyclerView;
-    public PlacementOpportunityAdapter placementOpportunityAdapter;
+    public AddPlacementOpportunityAdapter placementOpportunityAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,12 @@ public class SelectPlacementCompanyData extends AppCompatActivity {
 
         selectCompanyRecyclerView.setLayoutManager(new WrapContentLinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<PlacementOpportunityModel> options =
-                new FirebaseRecyclerOptions.Builder<PlacementOpportunityModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), PlacementOpportunityModel.class)
+        FirebaseRecyclerOptions<AddPlacementOpportunityModel> options =
+                new FirebaseRecyclerOptions.Builder<AddPlacementOpportunityModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), AddPlacementOpportunityModel.class)
                         .build();
 
-        placementOpportunityAdapter = new PlacementOpportunityAdapter(options);
+        placementOpportunityAdapter = new AddPlacementOpportunityAdapter(options);
         selectCompanyRecyclerView.setAdapter(placementOpportunityAdapter);
 
         arrowBackImageButton.setOnClickListener(view -> {

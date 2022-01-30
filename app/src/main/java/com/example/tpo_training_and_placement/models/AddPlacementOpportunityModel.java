@@ -1,13 +1,13 @@
 package com.example.tpo_training_and_placement.models;
 
-public class PlacementOpportunityModel {
+public class AddPlacementOpportunityModel {
 
     String CompanyName;
 
-    public PlacementOpportunityModel() {
+    public AddPlacementOpportunityModel() {
     }
 
-    public PlacementOpportunityModel(String companyName) {
+    public AddPlacementOpportunityModel(String companyName) {
         this.CompanyName = companyName;
     }
 

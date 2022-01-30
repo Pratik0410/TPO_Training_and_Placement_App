@@ -77,7 +77,7 @@
                         app:srcCompat="@drawable/ic_company_name" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/id_company_name_in_job_opportunity"
+                        android:id="@+id/id_company_name_text_view_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -112,7 +112,7 @@
                     app:startIconDrawable="@drawable/ic_role">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/id_company_name_for_job"
+                        android:id="@+id/id_role_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
@@ -141,6 +141,7 @@
                     app:startIconDrawable="@drawable/ic_location">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_location_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
@@ -168,6 +169,7 @@
                     app:startIconDrawable="@drawable/ic_summary">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_summary_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
@@ -196,6 +198,7 @@
                     app:startIconDrawable="@drawable/ic_key_qualifications">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_key_qualification_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_key_qualifications"
@@ -225,6 +228,7 @@
                     app:startIconDrawable="@drawable/ic_job_description">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_job_description_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
@@ -253,6 +257,7 @@
                     app:startIconDrawable="@drawable/ic_additional_requirement">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_additional_requirements_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"
@@ -281,6 +286,7 @@
                     app:startIconDrawable="@drawable/ic_link">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_link_for_applying_edit_text_in_activity_edit_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/abhaya_libre"

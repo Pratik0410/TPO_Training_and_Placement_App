@@ -193,7 +193,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
-                        android:id="@+id/id_register_company_button"
+                        android:id="@+id/id_upload_button_in_activity_add_placement_opportunity"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
