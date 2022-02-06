@@ -41,9 +41,7 @@ public class SelectPlacementCompanyData extends AppCompatActivity {
         placementOpportunityAdapter = new AddPlacementOpportunityAdapter(options);
         selectCompanyRecyclerView.setAdapter(placementOpportunityAdapter);
 
-        arrowBackImageButton.setOnClickListener(view -> {
-            finish();
-        });
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
     }
 
@@ -57,5 +55,22 @@ public class SelectPlacementCompanyData extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         placementOpportunityAdapter.stopListening();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        FirebaseRecyclerOptions<AddPlacementOpportunityModel> options =
+                new FirebaseRecyclerOptions.Builder<AddPlacementOpportunityModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), AddPlacementOpportunityModel.class)
+                        .build();
+
+        placementOpportunityAdapter = new AddPlacementOpportunityAdapter(options);
+        selectCompanyRecyclerView.setAdapter(placementOpportunityAdapter);
+
+        arrowBackImageButton.setOnClickListener(view -> finish());
+
+        placementOpportunityAdapter.startListening();
     }
 }
