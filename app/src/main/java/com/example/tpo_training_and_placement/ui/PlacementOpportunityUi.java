@@ -31,13 +31,9 @@ public class PlacementOpportunityUi extends AppCompatActivity {
 
         placementOpportunityUiCardView.setBackgroundResource(R.drawable.top_card_radius);
 
-        editPlacementOpportunitiesCardView.setOnClickListener(view -> {
-            startActivity(new Intent(PlacementOpportunityUi.this, EditPlacementData.class));
-        });
+        editPlacementOpportunitiesCardView.setOnClickListener(view -> startActivity(new Intent(PlacementOpportunityUi.this, EditPlacementData.class)));
 
-        addPlacementOpportunitiesCardView.setOnClickListener(view -> {
-            startActivity(new Intent(PlacementOpportunityUi.this, SelectPlacementCompanyData.class));
-        });
+        addPlacementOpportunitiesCardView.setOnClickListener(view -> startActivity(new Intent(PlacementOpportunityUi.this, SelectPlacementCompanyData.class)));
 
     }
 }
