@@ -25,35 +25,29 @@ public class EditPlacementOpportunityAdapter extends FirebaseRecyclerAdapter<Edi
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull EditPlacementOpportunityModel model) {
         holder.companyNameTextView.setText(model.getCompanyName());
         holder.roleTextView.setText(model.getRole());
-        holder.roleTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), EditPlacementOpportunityActivity.class);
-                i.putExtra("CompanyName", holder.companyNameTextView.getText().toString());
-                i.putExtra("Role", holder.roleTextView.getText().toString());
-                i.putExtra("Location", model.getLocation());
-                i.putExtra("Summary", model.getSummary());
-                i.putExtra("KeyQualification", model.getKeyQualification());
-                i.putExtra("JobDescription", model.getJobDescription());
-                i.putExtra("AdditionalRequirements", model.getAdditionalRequirements());
-                i.putExtra("LinkForApplying", model.getLinkForApplying());
-                view.getContext().startActivity(i);
-            }
+        holder.roleTextView.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), EditPlacementOpportunityActivity.class);
+            intent.putExtra("CompanyName", holder.companyNameTextView.getText().toString());
+            intent.putExtra("Role", holder.roleTextView.getText().toString());
+            intent.putExtra("Location", model.getLocation());
+            intent.putExtra("Summary", model.getSummary());
+            intent.putExtra("KeyQualification", model.getKeyQualification());
+            intent.putExtra("JobDescription", model.getJobDescription());
+            intent.putExtra("AdditionalRequirements", model.getAdditionalRequirements());
+            intent.putExtra("LinkForApplying", model.getLinkForApplying());
+            view.getContext().startActivity(intent);
         });
-        holder.companyNameTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), EditPlacementOpportunityActivity.class);
-                i.putExtra("CompanyName", holder.companyNameTextView.getText().toString());
-                i.putExtra("Role", holder.roleTextView.getText().toString());
-                i.putExtra("Location", model.getLocation());
-                i.putExtra("Summary", model.getSummary());
-                i.putExtra("KeyQualification", model.getKeyQualification());
-                i.putExtra("JobDescription", model.getJobDescription());
-                i.putExtra("AdditionalRequirements", model.getAdditionalRequirements());
-                i.putExtra("LinkForApplying", model.getLinkForApplying());
-                view.getContext().startActivity(i);
-            }
+        holder.companyNameTextView.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), EditPlacementOpportunityActivity.class);
+            intent.putExtra("CompanyName", holder.companyNameTextView.getText().toString());
+            intent.putExtra("Role", holder.roleTextView.getText().toString());
+            intent.putExtra("Location", model.getLocation());
+            intent.putExtra("Summary", model.getSummary());
+            intent.putExtra("KeyQualification", model.getKeyQualification());
+            intent.putExtra("JobDescription", model.getJobDescription());
+            intent.putExtra("AdditionalRequirements", model.getAdditionalRequirements());
+            intent.putExtra("LinkForApplying", model.getLinkForApplying());
+            view.getContext().startActivity(intent);
         });
     }
 
