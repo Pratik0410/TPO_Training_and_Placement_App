@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -20,7 +21,6 @@ import com.example.tpo_training_and_placement.activities.requestactivity.Student
 import com.example.tpo_training_and_placement.ui.AllActivitiesUi;
 import com.example.tpo_training_and_placement.ui.CompaniesUi;
 import com.example.tpo_training_and_placement.ui.ContactUsUi;
-import com.example.tpo_training_and_placement.ui.CurrentCompaniesUi;
 import com.example.tpo_training_and_placement.ui.NoticeUi;
 import com.example.tpo_training_and_placement.ui.PlacementHistoryUi;
 import com.example.tpo_training_and_placement.ui.PlacementOpportunityUi;
@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
