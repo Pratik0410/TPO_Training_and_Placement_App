@@ -87,4 +87,10 @@
     <string name="arrow_back_image_button_in_activity_add_placement_opportunity">Arrow Back ImageButton in Add Placement Opportunity</string>
     <string name="notice_text">Notice</string>
     <string name="add_placement_opportunity_text">Add Placement Opportunity</string>
+    <string name="edit_placement_opportunity_text">Edit Placement Opportunity</string>
+    <string name="select_branch_textview">Select Branch</string>
+    <string name="notify_student_text">Notify Student</string>
+    <string name="select_today_s_date_text">Select Today\'s Date</string>
+    <string name="send_button_text">Send</string>
+    <string name="company_name_image_content_description">Company Name Model</string>
 </resources>
