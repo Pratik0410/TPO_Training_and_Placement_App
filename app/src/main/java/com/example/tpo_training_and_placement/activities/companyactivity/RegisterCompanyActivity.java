@@ -14,11 +14,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,7 +26,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -47,6 +46,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     public TextInputLayout textInputLayout;
     public AutoCompleteTextView typeOfCompanyAutoCompleteTextView;
     public ImageView companyImageView;
+    public ImageButton arrowBackImageButton;
     public Uri filepath;
     public Bitmap bitmap;
     public int flagToCheckUploadingImage =0;
@@ -77,6 +77,9 @@ public class RegisterCompanyActivity extends AppCompatActivity {
         textInputLayout = findViewById(R.id.id_text_input_layout);
         typeOfCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview);
         companyImageView = findViewById(R.id.id_upload_company_logo_imageview);
+        arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_register_company);
+
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
         typeOfCompanyAutoCompleteTextView.setAdapter(arrayAdapter);
 
@@ -92,36 +95,28 @@ public class RegisterCompanyActivity extends AppCompatActivity {
             }
         });
 
-        companyImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Dexter.withActivity(RegisterCompanyActivity.this)
-                        .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                        .withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse response)
-                            {
-                                Intent intent=new Intent(Intent.ACTION_PICK);
-                                intent.setType("image/*");
-                                startActivityForResult(Intent.createChooser(intent,"Please select Image"),1);
-                            }
+        companyImageView.setOnClickListener(view -> Dexter.withActivity(RegisterCompanyActivity.this)
+                .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withListener(new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted(PermissionGrantedResponse response)
+                    {
+                        Intent intent=new Intent(Intent.ACTION_PICK);
+                        intent.setType("image/*");
+                        startActivityForResult(Intent.createChooser(intent,"Please select Image"),1);
+                    }
 
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse response) {
+                    @Override
+                    public void onPermissionDenied(PermissionDeniedResponse response) {
 
-                            }
+                    }
 
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
-                                token.continuePermissionRequest();
-                            }
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
 
-                        }).check();
-
-            }
-        });
-
-
+                }).check());
 
         registerButton.setOnClickListener(view -> {
 
@@ -133,28 +128,22 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                     StorageReference uploader = storage.getReference().child(companyNameTextInputEditText.getText().toString());
 
                     uploader.putFile(filepath)
-                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    Task<Uri> result = taskSnapshot.getStorage().getDownloadUrl();
-                                    result.addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                        @Override
-                                        public void onSuccess(Uri uri) {
+                            .addOnSuccessListener(taskSnapshot -> {
+                                Task<Uri> result = taskSnapshot.getStorage().getDownloadUrl();
+                                result.addOnSuccessListener(uri -> {
 
-                                            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                                            DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
+                                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                                    DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
 
-                                            Map map = new HashMap();
-                                            map.put("CompanyName", companyNameTextInputEditText.getText().toString());
-                                            map.put("Type of Company", typeOfCompanyAutoCompleteTextView.getText().toString());
-                                            map.put("Product or Service of Company", productServiceTextInputEditText.getText().toString());
-                                            map.put("About Company", aboutTextInputEditText.getText().toString());
-                                            map.put("Contact Details", contactDetailsTextInputEditText.getText().toString());
-                                            map.put("Company Logo", uri.toString());
-                                            databaseReference.child(companyNameTextInputEditText.getText().toString()).setValue(map);
-                                        }
-                                    });
-                                }
+                                    Map<String, String> map = new HashMap();
+                                    map.put("CompanyName", companyNameTextInputEditText.getText().toString());
+                                    map.put("Type of Company", typeOfCompanyAutoCompleteTextView.getText().toString());
+                                    map.put("Product or Service of Company", productServiceTextInputEditText.getText().toString());
+                                    map.put("About Company", aboutTextInputEditText.getText().toString());
+                                    map.put("Contact Details", contactDetailsTextInputEditText.getText().toString());
+                                    map.put("Company Logo", uri.toString());
+                                    databaseReference.child(companyNameTextInputEditText.getText().toString()).setValue(map);
+                                });
                             });
                     finish();
                 } else {
@@ -164,8 +153,6 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                 Toast.makeText(RegisterCompanyActivity.this, "Please Fill All Details", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
     @Override
@@ -182,6 +169,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                 flagToCheckUploadingImage =5;
             }catch (Exception ex)
             {
+                //pass
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
