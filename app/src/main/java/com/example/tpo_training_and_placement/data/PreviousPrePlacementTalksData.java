@@ -54,4 +54,21 @@ public class PreviousPrePlacementTalksData extends AppCompatActivity {
         super.onStop();
         prePlacementAdapter.stopListening();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        FirebaseRecyclerOptions<PrePlacementModel> options =
+                new FirebaseRecyclerOptions.Builder<PrePlacementModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Pre Placement Talks"), PrePlacementModel.class)
+                        .build();
+
+        prePlacementAdapter = new PrePlacementAdapter(options);
+        previousPrePlacementRecyclerView.setAdapter(prePlacementAdapter);
+
+        arrowBackImageButton.setOnClickListener(view -> finish());
+
+        prePlacementAdapter.startListening();
+    }
 }
