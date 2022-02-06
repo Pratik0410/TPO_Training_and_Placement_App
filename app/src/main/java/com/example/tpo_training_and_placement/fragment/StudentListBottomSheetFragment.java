@@ -1,21 +1,21 @@
 package com.example.tpo_training_and_placement.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToStudentActivity;
+import com.example.tpo_training_and_placement.adapters.StudentNotificationCardAdapter;
+import com.example.tpo_training_and_placement.models.StudentNotificationCardModel;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,6 +34,8 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
     private String mParam2;
 
     public ImageButton backPressImageButton;
+    public RecyclerView studentDataRecyclerView;
+    public StudentNotificationCardAdapter studentNotificationCardAdapter;
 
     public StudentListBottomSheetFragment() {
         // Required empty public constructor
@@ -70,23 +72,36 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_student_list_bottom_sheet, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_student_list_bottom_sheet, container, false);
 
-    @Override
-    public void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         backPressImageButton = view.findViewById(R.id.back_pressed_button);
         backPressImageButton.setOnClickListener(view1 -> {
             onStop();
         });
 
+        studentDataRecyclerView = (RecyclerView) view.findViewById(R.id.id_recycler_view_in_fragment);
+        studentDataRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        FirebaseRecyclerOptions<StudentNotificationCardModel> options =
+                new FirebaseRecyclerOptions.Builder<StudentNotificationCardModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Student Data"), StudentNotificationCardModel.class)
+                        .build();
 
+        studentNotificationCardAdapter = new StudentNotificationCardAdapter(options);
+        studentDataRecyclerView.setAdapter(studentNotificationCardAdapter);
+
+        return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        studentNotificationCardAdapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        studentNotificationCardAdapter.stopListening();
     }
 }
