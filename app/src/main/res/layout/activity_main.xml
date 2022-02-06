@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="ExtraText">
         <![CDATA[
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +37,7 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/abhaya_libre"
                 android:text="Hey, Admin"
                 android:textColor="@color/black"
@@ -45,7 +46,7 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/abhaya_libre"
                 android:text="Welcome Back!"
                 android:textColor="@color/black"
@@ -69,7 +70,7 @@
                 android:id="@+id/id_main_student_request"
                 android:layout_width="136dp"
                 android:layout_height="210dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 app:cardBackgroundColor="@color/grey"
                 app:cardCornerRadius="15dp"
@@ -86,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_vertical"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="30dp"
                     android:fontFamily="@font/abhaya_libre"
                     android:text="Request"
@@ -98,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="50dp"
                     android:fontFamily="@font/abhaya_libre"
                     android:text="Student "
@@ -119,7 +120,7 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     app:cardBackgroundColor="@color/grey"
                     app:cardCornerRadius="15dp"
                     app:cardElevation="10dp">
@@ -135,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center_vertical"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginBottom="20dp"
                         android:fontFamily="@font/abhaya_libre"
                         android:text="NOTICE"
@@ -150,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="@color/grey"
                     android:fontFamily="@font/abhaya_libre"
                     android:padding="15dp"
                     android:text="View All"
@@ -187,14 +188,14 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical|end"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     app:srcCompat="@drawable/placement_opportunity" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="37dp"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="40dp"
                     android:fontFamily="@font/abhaya_libre"
                     android:text="@string/placement"
@@ -206,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="35dp"
                     android:fontFamily="@font/abhaya_libre"
                     android:text="@string/opportunity_textview"
