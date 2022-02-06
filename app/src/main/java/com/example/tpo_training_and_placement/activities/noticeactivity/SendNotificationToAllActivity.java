@@ -1,25 +1,17 @@
 package com.example.tpo_training_and_placement.activities.noticeactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import android.app.DatePickerDialog;
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.ui.NoticeUi;
+import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 
@@ -27,10 +19,8 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
 
     public EditText dateEditText;
     public EditText enterNoticeEditText;
-    public CardView notifyAllUiCardView;
-    public Calendar calendar;
+    public ImageButton arrowBackImageButton;
     public Button sendButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,55 +29,33 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        dateEditText = findViewById(R.id.id_notify_all_date);
-        enterNoticeEditText = findViewById(R.id.id_notify_all_notice);
-        notifyAllUiCardView = findViewById(R.id.id_notification_card);
-        sendButton = findViewById(R.id.id_notify_all_send);
+        dateEditText = findViewById(R.id.id_date_edit_text_in_activity_send_notification_to_all);
+        enterNoticeEditText = findViewById(R.id.id_notice_edit_text_in_activity_send_notification_to_all);
+        sendButton = findViewById(R.id.id_send_button_in_activity_send_notification_to_all);
+        arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_send_notification_to_all);
 
-        calendar =Calendar.getInstance();
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int YEAR, int MONTH, int DAY_OF_MONTH) {
-                calendar.set(Calendar.YEAR,YEAR);
-                calendar.set(Calendar.MONTH,MONTH);
-                calendar.set(Calendar.DAY_OF_MONTH,DAY_OF_MONTH);
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
-                updateCalender();
-            }
+        MaterialDatePicker.Builder<Long> materialDateBuilder = MaterialDatePicker.Builder.datePicker();
+        materialDateBuilder.setTitleText("Select Today's Date");
+        final MaterialDatePicker<Long> materialDatePicker = materialDateBuilder.build();
 
-            private void updateCalender() {
-                String dateFormat = "dd-MM-yyyy";
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat, Locale.US);
-                dateEditText.setText(simpleDateFormat.format(calendar.getTime()));
-            }
+        dateEditText.setOnClickListener(view -> materialDatePicker.show(getSupportFragmentManager(),"MATERIAL_DATE_PICKER"));
 
-
-        };
-
-        notifyAllUiCardView.setBackgroundResource(R.drawable.bottom_card_radius);
-
-        dateEditText.setOnClickListener(view -> {
-            dateEditText.setTextColor(Color.BLACK);
-            new DatePickerDialog(SendNotificationToAllActivity.this,dateSetListener,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
-        });
-
-        enterNoticeEditText.setOnClickListener(view ->
-                enterNoticeEditText.setTextColor(Color.BLACK)
-        );
-
+        materialDatePicker.addOnPositiveButtonClickListener(selection -> dateEditText.setText(materialDatePicker.getHeaderText()));
 
         sendButton.setOnClickListener(view -> {
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference notifyall = database.getReference("Notice");
+
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference("Notice");
 
             if(dateEditText.getText().toString().length() > 0 && enterNoticeEditText.getText().toString().length() > 0){
 
-                Map data = new HashMap();
+                Map<String,String> data = new HashMap();
                 data.put("Date", dateEditText.getText().toString());
                 data.put("Notice", enterNoticeEditText.getText().toString());
-                notifyall.child(dateEditText.getText().toString()).setValue(data);
+                databaseReference.child(dateEditText.getText().toString()).setValue(data);
 
-                startActivity(new Intent(SendNotificationToAllActivity.this, NoticeUi.class));
                 finish();
             }
             else{
@@ -95,6 +63,11 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
             }
 
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
