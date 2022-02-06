@@ -48,7 +48,7 @@ public class AddPlacementOpportunityAdapter extends FirebaseRecyclerAdapter<AddP
         TextView companyNameTextView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            companyNameTextView = itemView.findViewById(R.id.id_company_name_of_placement_opportunity);
+            companyNameTextView = itemView.findViewById(R.id.id_register_company_name);
         }
     }
 }
