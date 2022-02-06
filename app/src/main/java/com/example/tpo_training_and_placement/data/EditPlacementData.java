@@ -42,10 +42,8 @@ public class EditPlacementData extends AppCompatActivity {
         editPlacementOpportunityAdapter = new EditPlacementOpportunityAdapter(options);
         editCompanyRecyclerView.setAdapter(editPlacementOpportunityAdapter);
 
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
-        arrowBackImageButton.setOnClickListener(view -> {
-            finish();
-        });
     }
 
     @Override
@@ -58,5 +56,22 @@ public class EditPlacementData extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         editPlacementOpportunityAdapter.stopListening();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        FirebaseRecyclerOptions<EditPlacementOpportunityModel> options =
+                new FirebaseRecyclerOptions.Builder<EditPlacementOpportunityModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Placement Opportunity"), EditPlacementOpportunityModel.class)
+                        .build();
+
+        editPlacementOpportunityAdapter = new EditPlacementOpportunityAdapter(options);
+        editCompanyRecyclerView.setAdapter(editPlacementOpportunityAdapter);
+
+        arrowBackImageButton.setOnClickListener(view -> finish());
+
+        editPlacementOpportunityAdapter.startListening();
     }
 }
