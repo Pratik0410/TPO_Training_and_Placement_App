@@ -93,4 +93,15 @@
     <string name="select_today_s_date_text">Select Today\'s Date</string>
     <string name="send_button_text">Send</string>
     <string name="company_name_image_content_description">Company Name Model</string>
+    <string name="today_s_date_hint">Today\'s Date</string>
+    <string name="student_or_everyone_hint">Student/Everyone</string>
+    <string name="name_text">Name</string>
+    <string name="email_text">Email</string>
+    <string name="mobile_no_text">Mobile No</string>
+    <string name="branch_text">Branch</string>
+    <string name="accept_button_text">Accept</string>
+    <string name="deny_button_text">deny</string>
+    <string name="company_ui_image_view_content_decription">Company UI ImageView Content Decription</string>
+    <string name="list_of_text">List Of</string>
+    <string name="companies_text">Companies</string>
 </resources>
