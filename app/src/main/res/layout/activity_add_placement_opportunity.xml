@@ -27,7 +27,7 @@
                 android:layout_marginStart="15dp"
                 android:background="@color/black"
                 android:src="@drawable/arrow_back"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
                         tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/id_company_name_edit_text_in_activity_edit_placement_opportunity"
+                        android:id="@+id/id_company_name_edit_text_in_activity_add_placement_opportunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
