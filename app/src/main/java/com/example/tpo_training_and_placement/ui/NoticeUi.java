@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToStudentActivity;
 import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToAllActivity;
-import com.example.tpo_training_and_placement.activities.noticeactivity.SentNotificationsActivity;
+import com.example.tpo_training_and_placement.data.SentNotificationsData;
 
 public class NoticeUi extends AppCompatActivity {
 
@@ -40,7 +40,7 @@ public class NoticeUi extends AppCompatActivity {
         );
 
         sentNotificationCardView.setOnClickListener(view ->
-                startActivity(new Intent(NoticeUi.this, SentNotificationsActivity.class))
+                startActivity(new Intent(NoticeUi.this, SentNotificationsData.class))
         );
     }
 }
