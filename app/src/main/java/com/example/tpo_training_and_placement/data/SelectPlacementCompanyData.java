@@ -55,6 +55,13 @@ public class SelectPlacementCompanyData extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         placementOpportunityAdapter.stopListening();
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
     @Override
