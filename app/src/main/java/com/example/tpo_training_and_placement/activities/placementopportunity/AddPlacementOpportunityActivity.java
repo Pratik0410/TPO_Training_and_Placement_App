@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
+import com.example.tpo_training_and_placement.data.SelectPlacementCompanyData;
 import com.example.tpo_training_and_placement.ui.PlacementOpportunityUi;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.database.DatabaseReference;
@@ -49,7 +50,10 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
 
         companyNameMaterialTextView.setText(companyName);
 
-        arrowBackImageButton.setOnClickListener(view -> finish());
+        arrowBackImageButton.setOnClickListener(view -> {
+            startActivity(new Intent(AddPlacementOpportunityActivity.this,SelectPlacementCompanyData.class));
+            finish();
+        });
 
         uploadButton.setOnClickListener(view -> {
             if(companyNameMaterialTextView.getText().toString().length() != 0 && roleTextInputLayout.getText().toString().length() != 0 && locationTextInputLayout.getText().toString().length() != 0
@@ -70,11 +74,17 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
                 data.put("LinkForApplying", linkForApplyingTextInputLayout.getText().toString());
                 placementOpportunity.child(companyNameMaterialTextView.getText().toString()).setValue(data);
 
-                startActivity(new Intent(AddPlacementOpportunityActivity.this, PlacementOpportunityUi.class));
                 finish();
             }else{
                 Toast.makeText(AddPlacementOpportunityActivity.this, "Fill All The Details", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(AddPlacementOpportunityActivity.this,SelectPlacementCompanyData.class));
+        finish();
     }
 }

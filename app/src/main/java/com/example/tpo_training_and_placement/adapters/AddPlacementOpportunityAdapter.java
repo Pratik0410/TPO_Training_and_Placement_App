@@ -1,6 +1,7 @@
 package com.example.tpo_training_and_placement.adapters;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,11 +30,13 @@ public class AddPlacementOpportunityAdapter extends FirebaseRecyclerAdapter<AddP
             Intent intent = new Intent(view.getContext(), AddPlacementOpportunityActivity.class);
             intent.putExtra("Company Name",model.getCompanyName());
             view.getContext().startActivity(intent);
+            ((Activity)view.getContext()).finish();
         });
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), AddPlacementOpportunityActivity.class);
             intent.putExtra("Company Name",model.getCompanyName());
             view.getContext().startActivity(intent);
+            ((Activity)view.getContext()).finish();
         });
     }
 
