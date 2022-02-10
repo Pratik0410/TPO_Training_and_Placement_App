@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // to make the Navigation drawer icon always appear on the action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.id_main_nav_view);
+        NavigationView navigationView = findViewById(R.id.id_main_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBar actionBar;
@@ -98,9 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // drawer when the icon is clicked
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
+        actionBarDrawerToggle.onOptionsItemSelected(item);
         return true;
     }
 
