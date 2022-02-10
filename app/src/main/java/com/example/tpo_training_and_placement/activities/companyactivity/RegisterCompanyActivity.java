@@ -70,13 +70,13 @@ public class RegisterCompanyActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         registerButton = findViewById(R.id.id_upload_button_in_activity_add_placement_opportunity);
-        companyNameTextInputEditText = findViewById(R.id.id_company_name_edit_text_in_register_company);
-        productServiceTextInputEditText = findViewById(R.id.id_product_service_edit_text);
-        aboutTextInputEditText = findViewById(R.id.id_about_edit_text_in_register_company);
-        contactDetailsTextInputEditText = findViewById(R.id.id_contact_details_edit_text_in_register_company);
+        companyNameTextInputEditText = findViewById(R.id.id_company_name_edit_text_in_activity_edit_existing_company);
+        productServiceTextInputEditText = findViewById(R.id.id_product_service_edit_text_in_edit_existing_company);
+        aboutTextInputEditText = findViewById(R.id.id_about_edit_text_in_edit_existing_company);
+        contactDetailsTextInputEditText = findViewById(R.id.id_contact_details_edit_text_in_activity_register_company);
         textInputLayout = findViewById(R.id.id_text_input_layout);
-        typeOfCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview);
-        companyImageView = findViewById(R.id.id_upload_company_logo_imageview);
+        typeOfCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview_in_edit_existing_company);
+        companyImageView = findViewById(R.id.id_upload_company_logo_imageview_in_activity_edit_existing_company);
         arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_register_company);
 
         arrowBackImageButton.setOnClickListener(view -> finish());

@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO_Training_and_Placement">
         <activity
+            android:name=".activities.companyactivity.EditExistingCompanyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.placementhistoryactivity.EditPlacementHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".data.EditPlacementHistoryData"
+            android:exported="false" />
+        <activity
             android:name=".data.EditCompanyData"
             android:exported="false" />
         <activity
@@ -29,9 +38,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.PlacementOpportunityUi"
-            android:exported="false" />
-        <activity
-            android:name=".activities.placementhistoryactivity.AddPlacementHistoryYearActivity"
             android:exported="false" />
         <activity
             android:name=".data.PreviousPrePlacementTalksData"
@@ -89,6 +95,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
