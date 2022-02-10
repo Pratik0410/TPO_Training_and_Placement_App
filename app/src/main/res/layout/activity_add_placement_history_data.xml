@@ -3,398 +3,244 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".activities.placementhistoryactivity.AddPlacementHistoryDataActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="95dp"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/abhaya_libre"
-            android:text="@string/placement_data_textview"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+            android:layout_height="60dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="95dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            <ImageButton
+                android:id="@+id/id_arrow_back_image_button_in_activity_add_placement_history_data"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:background="@color/black"
+                android:src="@drawable/arrow_back"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="03dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:hint="@string/hint_year"
-                android:padding="5dp"
-                android:textColorHint="#A63A3535"
-                android:textSize="28sp"
+                android:text="@string/placement_data_textview"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#11501414"
-                        android:ems="10"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:hint="@string/hint_company_name"
-                        android:inputType="textPersonName"
-                        android:padding="8dp"
-                        android:textColorHint="#A63A3535"
-                        android:textSize="20sp" />
-
-                    <ScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/artificial_intelligence_machine_learning_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/civil_enigineering_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/chemical_engineering_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/computer_technology_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/electrical_engineering_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/information_technology_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="5dp"
-                                    android:fontFamily="@font/abhaya_libre"
-                                    android:text="@string/mechanical_engineering_checkbox"
-                                    android:textSize="20sp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <EditText
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:background="#11501414"
-                                        android:fontFamily="@font/abhaya_libre"
-                                        android:hint="@string/hint_number_of_students_placed"
-                                        android:inputType="number"
-                                        android:padding="8dp"
-                                        android:textColorHint="#A63A3535" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <EditText
-                                android:id="@+id/editTextTextPersonName2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="30dp"
-                                android:background="#11501414"
-                                android:ems="10"
-                                android:fontFamily="@font/abhaya_libre"
-                                android:hint="@string/hint_average_lpa"
-                                android:inputType="textPersonName"
-                                android:padding="8dp"
-                                android:textColorHint="#A63A3535" />
-
-                            <EditText
-                                android:id="@+id/editTextTextPersonName3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="30dp"
-                                android:background="#11501414"
-                                android:ems="10"
-                                android:fontFamily="@font/abhaya_libre"
-                                android:hint="@string/hint_total_lpa"
-                                android:inputType="textPersonName"
-                                android:padding="8dp"
-                                android:textColorHint="#A63A3535" />
-
-                            <Button
-                                android:id="@+id/button"
-                                android:layout_width="120dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom|center"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:backgroundTint="@color/black"
-                                android:fontFamily="@font/abhaya_libre"
-                                android:padding="5dp"
-                                android:text="@string/submit_button"
-                                android:textSize="18sp"
-                                app:cornerRadius="20dp" />
-
-                        </LinearLayout>
-                    </ScrollView>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/from_text"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_from_year_edit_text_in_activity_add_placement_history_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:padding="15dp"
+                        android:textColorHint="#A63A3535"
+                        android:textCursorDrawable="@color/black"
+                        android:textSize="20sp"
+                        app:boxStrokeColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:text="@string/dash_symbol_text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/to_text"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_to_year_edit_text_in_activity_add_placement_history_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:padding="15dp"
+                        android:textColorHint="#A63A3535"
+                        android:textCursorDrawable="@color/black"
+                        android:textSize="20sp"
+                        app:boxStrokeColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/id_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
+
+                <AutoCompleteTextView
+                    android:id="@+id/id_auto_complete_textview_in_edit_existing_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/select_company_text"
+                    android:inputType="none"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/id_select_branch_linearlayout_in_activity_add_placement_history_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" />
+
+
+            <Button
+                android:id="@+id/id_add_branch_button_in_activity_add_placement_history_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:text="@string/add_branch_button" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="@string/hint_average_lpa"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_average_lpa_edit_text_in_activity_add_placement_history_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    app:boxStrokeColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="@string/hint_total_lpa"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_about_edit_text_in_edit_existing_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    app:boxStrokeColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/id_upload_button_in_activity_add_placement_opportunity"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/abhaya_libre"
+                android:text="@string/submit_button"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
