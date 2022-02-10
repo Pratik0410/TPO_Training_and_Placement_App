@@ -10,11 +10,6 @@
     <string name="register_company">Register Company</string>
     <string name="hint_company_name">Company name</string>
     <string name="button_register">Register</string>
-    <string name="student_notice">For Example :
-        All the students of TYCM-I, TYCM-II, and TYCM-SS are
-        hereby informed that a pool campus activity for diploma
-        2019, 2020 and 2021 batch is organized by Infosys.
-        </string>
     <string name="add_textview">Add</string>
     <string name="previous_textview">Previous</string>
     <string name="add_pre_placement">Add Pre-Placement</string>
@@ -26,18 +21,18 @@
     <string name="contact_us_email_textview">kkwaghpolytechnicnsk@gmail.com</string>
     <string name="contact_us_name_textview">Prathamesh Sonawane</string>
     <string name="hint_notification">Student/Everyone</string>
-    <string name="select_todays_date">Select Today\'s Date</string>
+    <string name="select_today_s_date">Select Today\'s Date</string>
     <string name="update_button">update</string>
     <string name="hint_select_year">Select Year</string>
-    <string name="Placement_year_textview">Placement Year</string>
-    <string name="artificial_intelligence_machine_learning_checkbox">AI/ML</string>
-    <string name="civil_enigineering_checkbox">CE</string>
-    <string name="chemical_engineering_checkbox">CH</string>
-    <string name="computer_technology_checkbox">CML</string>
-    <string name="mechanical_engineering_checkbox">ME</string>
-    <string name="information_technology_checkbox">IT</string>
-    <string name="electrical_engineering_checkbox">EJ</string>
-    <string name="hint_number_of_students_placed">No.of Students Placed</string>
+    <string name="placement_year_textview">Placement Year</string>
+    <string name="artificial_intelligence_machine_learning_text">AI/ML</string>
+    <string name="civil_engineering_text">CE</string>
+    <string name="chemical_engineering_text">CH</string>
+    <string name="computer_technology_text">CM</string>
+    <string name="mechanical_engineering_text">ME</string>
+    <string name="information_technology_text">IT</string>
+    <string name="electrical_engineering_text">EJ</string>
+    <string name="number_of_students_placed_hint">No.of Students Placed</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -58,13 +53,6 @@
     <string name="role_textview">Role</string>
     <string name="additional_requirements_textview">Additional Requirements</string>
     <string name="upload_button">Upload</string>
-    <string name="company_name_eg_hint">Company Name : Apple</string>
-    <string name="role_eg_hint">Systems Experience Engineer</string>
-    <string name="location_eg_hint">Boulder,Colorado,United States</string>
-    <string name="summary_eg_hint">Posted : Nov 18,2021 <br /> Weekly Hours : 40 <br /> The Interaction Architecture team is searching for a Producer.In this role,you will help the team in organizing our explorations, connection and prototype development work.Your creative practice will be a balance of partnering and directing,i.e. be a coach that works both by watchful observation and active support.You will work closely with the team of foster and nurture ideas,help organize projects, prioritize our work,and be a connector to teams in the studio and across Apple.</string>
-    <string name="key_qualification_eg_hint"> \u25CF  Comfortable with ambiguous project goals  <br /> \u25CF  Provide structure and clarity where it’s needed <br />\u25CF  Have a flexible approach to project planning a wide range of project types <br />\u25CF  Experience with both technical and creative development <br />\u25CF  Have experience in both hardware and software design projects <br />\u25CF  Ability to foster and nurture the ideas of the team <br />\u25CF  Have an affinity for Design and Tech <br />\u25CF  Know how to motivate and align diverse groups of people <br />\u25CF  Understand the practice of experience prototyping</string>
-    <string name="description_eg_hint">The IA team work with people all over Apple: interface designers, industrial designers, product development, other prototyping groups, technologists, engineers, marketing and executives. The team exists in a multidisciplinary studio environment and participates in individual and group reviews. IA are here to spark inspiration and conversation with their prototypes and then collaborate with other teams at Apple for execution and implementation. We bring ideas to the table and ideas to life.</string>
-    <string name="additional_requirements_eg_hint">The IA team work with people all over Apple: interface designers, industrial designers, product development, other prototyping groups, technologists, engineers, marketing and executives. The team exists in a multidisciplinary studio environment and participates in individual and group reviews. IA are here to spark inspiration and conversation with their prototypes and then collaborate with other teams at Apple for execution and implementation. We bring ideas to the table and ideas to life.</string>
     <string name="apply_here_textview">Apply Here</string>
     <string name="apply_for_job_eg_hint">Link for Applying Job</string>
     <string name="about_hint">About</string>
@@ -104,4 +92,11 @@
     <string name="company_ui_image_view_content_decription">Company UI ImageView Content Decription</string>
     <string name="list_of_text">List Of</string>
     <string name="companies_text">Companies</string>
+    <string name="no_of_student_text">No. of Student</string>
+    <string name="add_branch_button">Add Branch</string>
+    <string name="placement_history_text">Placement History</string>
+    <string name="training_and_placement_report_text">Training and Placement Report</string>
+    <string name="total_text">Total</string>
+    <string name="sr_no_text">Sr. No</string>
+    <string name="edit_company_text">Edit Company</string>
 </resources>
