@@ -98,5 +98,9 @@
     <string name="training_and_placement_report_text">Training and Placement Report</string>
     <string name="total_text">Total</string>
     <string name="sr_no_text">Sr. No</string>
+    <string name="dash_symbol_text">-</string>
+    <string name="from_text">From</string>
+    <string name="to_text">To</string>
     <string name="edit_company_text">Edit Company</string>
+
 </resources>
