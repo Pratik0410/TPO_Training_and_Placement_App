@@ -153,6 +153,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="40dp"
                     android:backgroundTint="@color/black"
+                    android:fontFamily="@font/abhaya_libre"
                     android:text="@string/submit_button" />
 
             </LinearLayout>
