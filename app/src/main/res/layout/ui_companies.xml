@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/companyui"
-        android:contentDescription="@string/company_ui_image_view_content_decription" />
+        android:contentDescription="@string/company_ui_image_view_content_description" />
 
     <TextView
         android:id="@+id/textView"
@@ -76,6 +76,15 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    app:srcCompat="@drawable/edit_existing_company" />
+
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
@@ -124,6 +133,15 @@
                 app:cardBackgroundColor="@color/black"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="15dp"
+                    app:srcCompat="@drawable/add_company" />
 
                 <TextView
                     android:id="@+id/textView10"
