@@ -14,6 +14,7 @@ public class AllActivitiesUi extends AppCompatActivity {
     public CardView uiAllComponentsCardView;
     public CardView studentRequestCardView;
     public CardView noticeCardView;
+    public CardView trainingCardView;
     public CardView placementOpportunitiesCardView;
     public CardView companyCardView;
     public CardView prePlacementCardView;
@@ -30,6 +31,7 @@ public class AllActivitiesUi extends AppCompatActivity {
         uiAllComponentsCardView = findViewById(R.id.id_ui_all_components);
         studentRequestCardView = findViewById(R.id.id_student_request_card);
         noticeCardView = findViewById(R.id.id_notice_card);
+        trainingCardView = findViewById(R.id.id_training_card);
         placementOpportunitiesCardView = findViewById(R.id.id_current_companies_card);
         companyCardView = findViewById(R.id.id_companies_card);
         prePlacementCardView = findViewById(R.id.id_pre_placement_card);
@@ -42,6 +44,10 @@ public class AllActivitiesUi extends AppCompatActivity {
 
         noticeCardView.setOnClickListener(view -> {
             startActivity(new Intent(AllActivitiesUi.this, NoticeUi.class));
+        });
+
+        trainingCardView.setOnClickListener(view -> {
+            startActivity(new Intent(AllActivitiesUi.this, TrainingUi.class));
         });
 
         placementOpportunitiesCardView.setOnClickListener(view -> {

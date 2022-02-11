@@ -158,6 +158,38 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/id_training_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="55dp"
+                    app:cardBackgroundColor="@color/grey"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        app:srcCompat="@drawable/training_img" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:text="@string/training_text"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/id_current_companies_card"
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
