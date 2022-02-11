@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO_Training_and_Placement">
         <activity
+            android:name=".activities.trainingactivity.EditTrainingDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".data.EditTrainingDetailsData"
+            android:exported="false" />
+        <activity
+            android:name=".activities.trainingactivity.AddTrainingDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TrainingUi"
+            android:exported="false" />
+        <activity
             android:name=".activities.companyactivity.EditExistingCompanyActivity"
             android:exported="false" />
         <activity

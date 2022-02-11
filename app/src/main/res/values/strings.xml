@@ -89,7 +89,7 @@
     <string name="branch_text">Branch</string>
     <string name="accept_button_text">Accept</string>
     <string name="deny_button_text">deny</string>
-    <string name="company_ui_image_view_content_decription">Company UI ImageView Content Decription</string>
+    <string name="company_ui_image_view_content_description">Company UI ImageView Content Description</string>
     <string name="list_of_text">List Of</string>
     <string name="companies_text">Companies</string>
     <string name="no_of_student_text">No. of Student</string>
@@ -102,5 +102,18 @@
     <string name="from_text">From</string>
     <string name="to_text">To</string>
     <string name="edit_company_text">Edit Company</string>
+    <string name="training_text">Training</string>
+    <string name="detail_text">Detail</string>
+    <string name="add_training_details_text">Add Training Details</string>
+    <string name="name_of_company_or_organization_text">Name of Company/Organization</string>
+    <string name="about_the_company_0r_organization_text">About the Company/Organization</string>
+    <string name="contents_of_training_text">Contents of Training</string>
+    <string name="training_duration_text">Training Duration</string>
+    <string name="training_charges_text">Training Charges</string>
+    <string name="registration_date_text">Registration Date</string>
+    <string name="last_date_of_registration_text">Last Date of Registration</string>
+    <string name="eligibility_criteria_text">Eligibility Criteria</string>
+    <string name="edit_training_details_text">Edit Training Details</string>
+
 
 </resources>
