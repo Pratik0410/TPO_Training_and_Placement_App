@@ -25,6 +25,7 @@ import com.example.tpo_training_and_placement.ui.NoticeUi;
 import com.example.tpo_training_and_placement.ui.PlacementHistoryUi;
 import com.example.tpo_training_and_placement.ui.PlacementOpportunityUi;
 import com.example.tpo_training_and_placement.ui.PrePlacementUi;
+import com.example.tpo_training_and_placement.ui.TrainingUi;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -112,6 +113,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_notice:
                 startActivity(new Intent(MainActivity.this,NoticeUi.class));
+                break;
+            case R.id.nav_training:
+                startActivity(new Intent(MainActivity.this,TrainingUi.class));
                 break;
             case R.id.nav_placement_opportunities:
                 startActivity(new Intent(MainActivity.this,PlacementOpportunityUi.class));
