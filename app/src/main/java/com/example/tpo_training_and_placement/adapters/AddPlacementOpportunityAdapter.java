@@ -29,6 +29,7 @@ public class AddPlacementOpportunityAdapter extends FirebaseRecyclerAdapter<AddP
         holder.companyNameTextView.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), AddPlacementOpportunityActivity.class);
             intent.putExtra("Company Name",model.getCompanyName());
+            intent.putExtra("Company Logo", model.getCompanyLogo());
             view.getContext().startActivity(intent);
             ((Activity)view.getContext()).finish();
         });
