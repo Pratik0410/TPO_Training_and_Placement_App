@@ -141,7 +141,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                                     map.put("Product or Service of Company", productServiceTextInputEditText.getText().toString());
                                     map.put("About Company", aboutTextInputEditText.getText().toString());
                                     map.put("Contact Details", contactDetailsTextInputEditText.getText().toString());
-                                    map.put("Company Logo", uri.toString());
+                                    map.put("CompanyLogo", uri.toString());
                                     databaseReference.child(companyNameTextInputEditText.getText().toString()).setValue(map);
                                 });
                             });

@@ -21,7 +21,7 @@ import java.util.Objects;
 
 public class AddPlacementOpportunityActivity extends AppCompatActivity {
 
-    public String companyName;
+    public String companyName, companyLogo;
     public MaterialTextView companyNameMaterialTextView;
     public ImageButton arrowBackImageButton;
     public EditText roleTextInputLayout,locationTextInputLayout, summaryTextInputLayout, keyQualificationTextInputlayout,
@@ -47,6 +47,7 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
         uploadButton = findViewById(R.id.id_upload_button_in_activity_add_placement_opportunity);
 
         companyName = getIntent().getExtras().get("Company Name").toString();
+        companyLogo = getIntent().getExtras().get("Company Logo").toString();
 
         companyNameMaterialTextView.setText(companyName);
 
@@ -72,6 +73,7 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
                 data.put("JobDescription", jobDescriptionTextInputLayout.getText().toString());
                 data.put("AdditionalRequirements", additionalRequirementsTextInputLayout.getText().toString());
                 data.put("LinkForApplying", linkForApplyingTextInputLayout.getText().toString());
+                data.put("CompanyLogo", companyLogo);
                 placementOpportunity.child(companyNameMaterialTextView.getText().toString()).setValue(data);
 
                 finish();

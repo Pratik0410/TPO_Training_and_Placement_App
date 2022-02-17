@@ -2,13 +2,15 @@ package com.example.tpo_training_and_placement.models;
 
 public class AddPlacementOpportunityModel {
 
-    String CompanyName;
+    String CompanyName, CompanyLogo;
 
     public AddPlacementOpportunityModel() {
     }
 
-    public AddPlacementOpportunityModel(String companyName) {
-        this.CompanyName = companyName;
+
+    public AddPlacementOpportunityModel(String companyName, String companyLogo) {
+        CompanyName = companyName;
+        CompanyLogo = companyLogo;
     }
 
     public String getCompanyName() {
@@ -16,6 +18,14 @@ public class AddPlacementOpportunityModel {
     }
 
     public void setCompanyName(String companyName) {
-        this.CompanyName = companyName;
+        CompanyName = companyName;
+    }
+
+    public String getCompanyLogo() {
+        return CompanyLogo;
+    }
+
+    public void setCompany_Logo(String companyLogo) {
+        CompanyLogo = companyLogo;
     }
 }

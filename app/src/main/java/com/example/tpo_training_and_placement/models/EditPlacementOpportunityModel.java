@@ -1,12 +1,14 @@
 package com.example.tpo_training_and_placement.models;
 
 public class EditPlacementOpportunityModel {
-    private String CompanyName, Role, Location, Summary, KeyQualification, JobDescription, AdditionalRequirements, LinkForApplying;
+    private String CompanyName, Role, Location, Summary, KeyQualification, JobDescription, AdditionalRequirements, LinkForApplying, CompanyLogo;
 
     public EditPlacementOpportunityModel() {
     }
 
-    public EditPlacementOpportunityModel(String companyName, String role, String location, String summary, String keyQualification, String jobDescription, String additionalRequirements, String linkForApplying) {
+
+
+    public EditPlacementOpportunityModel(String companyName, String role, String location, String summary, String keyQualification, String jobDescription, String additionalRequirements, String linkForApplying, String companyLogo) {
         this.CompanyName = companyName;
         this.Role = role;
         this.Location = location;
@@ -15,6 +17,7 @@ public class EditPlacementOpportunityModel {
         this.JobDescription = jobDescription;
         this.AdditionalRequirements = additionalRequirements;
         this.LinkForApplying = linkForApplying;
+        this.CompanyLogo = companyLogo;
     }
 
     public String getCompanyName() {
@@ -79,5 +82,13 @@ public class EditPlacementOpportunityModel {
 
     public void setLinkForApplying(String linkForApplying) {
         LinkForApplying = linkForApplying;
+    }
+
+    public String getCompanyLogo() {
+        return CompanyLogo;
+    }
+
+    public void setCompanyLogo(String companyLogo) {
+        CompanyLogo = companyLogo;
     }
 }

@@ -9,7 +9,7 @@
     app:cardElevation="10dp">
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/id_company_image_in_model_edit_placement_opportunity"
         android:layout_width="90dp"
         android:layout_height="100dp"
         android:layout_gravity="center_vertical"
