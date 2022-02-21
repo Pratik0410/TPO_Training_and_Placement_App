@@ -90,18 +90,30 @@
         <entry key="..\:/Tanmay/Diploma 2019-22/Industrial Training/GDSS Training/TPO_Training_and_Placement/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KETAKI/Desktop/Nisha/nishu/diploma/TPO/app/src/main/res/layout/activity_register_company.xml" value="0.25" />
         <entry key="..\:/Users/KETAKI/Desktop/Nisha/nishu/diploma/TPO/app/src/main/res/layout/ui_placement_opportunity.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_add_placement_history_data.xml" value="0.25" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_add_placement_opportunity.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_add_pre_placement_talk.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_add_training_details.xml" value="0.33" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_edit_existing_company.xml" value="0.25" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_edit_placement_history.xml" value="0.21" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_edit_placement_opportunity.xml" value="0.25" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_edit_training_details.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_register_company.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/activity_send_notification_to_all.xml" value="0.13768115942028986" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_edit_placement.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_edit_placement_history.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_edit_training_details.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_placement_history.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_previous_pre_placement_talks.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/data_view_placement_history.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/dropdownlist_item.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_edit_placement_history_card.xml" value="0.33" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_edit_placement_opportunity.xml" value="0.25" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_placement_history_card.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_placement_history_year_card.xml" value="0.33" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_pre_placement_talks.xml" value="0.21" />
+        <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/model_student_registration_card.xml" value="0.21" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/ui_all_activities.xml" value="0.2" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/ui_companies.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/ketaki/Desktop/TPO_Training_and_Placement/app/src/main/res/layout/ui_notice.xml" value="0.17481884057971014" />

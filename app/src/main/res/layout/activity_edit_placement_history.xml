@@ -7,7 +7,7 @@
     tools:context=".activities.placementhistoryactivity.EditPlacementHistoryActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/black"
@@ -26,191 +26,228 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
                 android:background="@color/black"
-                android:contentDescription="@string/arrow_back_of_data_select_placement_opportunity"
                 android:src="@drawable/arrow_back"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="03dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="@string/placement_history_text"
+                android:text="@string/edit_placement_history_text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/abhaya_libre"
-        android:text="@string/training_and_placement_report_text"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
-
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0">
 
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_registration_date" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:text="@string/batch_text"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:text="@string/dash_symbol_text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/id_yesr_text_view_in_activity_edit_placement_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/hint_year"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"
+                    android:padding="15dp"
+                    android:background="@drawable/border_for_textview"/>
+
+               </LinearLayout>
+
+            <TextView
+                android:id="@+id/student_name_text_view_in_activity_edit_placement_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/student_name_text"
+                android:fontFamily="@font/abhaya_libre"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:background="@drawable/border_for_textview"
+                android:drawableStart="@drawable/ic_student_name"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/id_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_company_name"
+                app:hintTextColor="@color/black">
+
+                <AutoCompleteTextView
+                    android:id="@+id/id_select_company_auto_complete_textview_in_activity_edit_placement_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/select_company_text"
+                    android:inputType="none"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="@string/designation_text"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_role"
+                app:hintTextColor="@color/black">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_designation_edit_text_in_activity_edit_placement_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    app:boxStrokeColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="@string/salary_text"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_training_charges"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_salary_edit_text_in_edit_placement_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    app:boxStrokeColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/id_update_placement_history_button_in_activity_edit_placement_history"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:text="@string/update_button"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/sr_no_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/hint_company_name"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/artificial_intelligence_machine_learning_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/civil_engineering_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/chemical_engineering_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/computer_technology_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/information_technology_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/mechanical_engineering_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/electrical_engineering_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/total_text"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/hint_average_lpa"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:padding="10dp"
-                        android:text="@string/hint_total_lpa"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                </TableRow>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
+                <Button
+                    android:id="@+id/id_delete_placement_history_button_in_activity_edit_placement_history"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:text="@string/delete_button"
+                    android:textSize="16sp" />
             </LinearLayout>
-        </HorizontalScrollView>
 
-    </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

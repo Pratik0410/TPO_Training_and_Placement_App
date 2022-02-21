@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_student_name_text_view_in_model_edit_placement_history_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:hint="@string/student_name_text"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_company_name_text_view_in_model_edit_placement_history_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:hint="@string/hint_company_name"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_year_text_view_in_model_edit_placement_history_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:hint="@string/hint_year"
+            android:padding="05dp"
+            android:textColor="@color/black"
+            android:textColorHint="#A63A3535"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/black" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

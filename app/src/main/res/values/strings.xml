@@ -114,6 +114,13 @@
     <string name="last_date_of_registration_text">Last Date of Registration</string>
     <string name="eligibility_criteria_text">Eligibility Criteria</string>
     <string name="edit_training_details_text">Edit Training Details</string>
+    <string name="batch_text">Batch</string>
+    <string name="student_name_text">Student name</string>
+    <string name="designation_text">Designation</string>
+    <string name="salary_text">Salary</string>
+    <string name="add_placement_history_text">Add Placement History</string>
+    <string name="edit_placement_history_text">Edit Placement History</string>
+    <string name="view_text">View</string>
 
 
 </resources>

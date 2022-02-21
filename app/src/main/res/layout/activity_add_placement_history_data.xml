@@ -36,7 +36,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="03dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="@string/placement_data_textview"
+                android:text="@string/add_placement_history_text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -51,8 +51,10 @@
         android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView">
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,34 +67,27 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/abhaya_libre"
-                    android:hint="@string/from_text"
-                    android:textColorHint="@color/black"
-                    app:boxStrokeColor="@color/black"
-                    app:hintTextColor="@color/black">
+                    app:srcCompat="@drawable/ic_registration_date" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/id_from_year_edit_text_in_activity_add_placement_history_data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/abhaya_libre"
-                        android:inputType="number"
-                        android:minHeight="48dp"
-                        android:padding="15dp"
-                        android:textColorHint="#A63A3535"
-                        android:textCursorDrawable="@color/black"
-                        android:textSize="20sp"
-                        app:boxStrokeColor="@color/black" />
-                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:text="@string/batch_text"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -108,32 +103,48 @@
                     android:textSize="30sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/abhaya_libre"
-                    android:hint="@string/to_text"
                     android:textColorHint="@color/black"
                     app:boxStrokeColor="@color/black"
                     app:hintTextColor="@color/black">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/id_to_year_edit_text_in_activity_add_placement_history_data"
+                    <AutoCompleteTextView
+                        android:id="@+id/id_auto_complete_textview_in_edit_existing_company2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/abhaya_libre"
-                        android:inputType="number"
-                        android:minHeight="48dp"
-                        android:padding="15dp"
-                        android:textColorHint="#A63A3535"
-                        android:textCursorDrawable="@color/black"
-                        android:textSize="20sp"
-                        app:boxStrokeColor="@color/black" />
+                        android:hint="@string/hint_year"
+                        android:inputType="none"
+                        android:textColorHint="@color/black"
+                        android:textSize="20sp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_student_name"
+                app:hintTextColor="@color/black">
+
+            <AutoCompleteTextView
+                android:id="@+id/id_auto_complete_textview_in_edit_existing_company3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="@string/student_name_text"
+                android:inputType="none"
+                android:textColorHint="@color/black"
+                android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/id_text_input_layout"
@@ -144,12 +155,14 @@
                 android:fontFamily="@font/abhaya_libre"
                 android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_company_name"
                 app:hintTextColor="@color/black">
 
                 <AutoCompleteTextView
                     android:id="@+id/id_auto_complete_textview_in_edit_existing_company"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/abhaya_libre"
                     android:hint="@string/select_company_text"
                     android:inputType="none"
@@ -158,21 +171,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:id="@+id/id_select_branch_linearlayout_in_activity_add_placement_history_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical" />
-
-
-            <Button
-                android:id="@+id/id_add_branch_button_in_activity_add_placement_history_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:text="@string/add_branch_button" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -181,9 +179,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:hint="@string/hint_average_lpa"
+                android:hint="@string/designation_text"
                 android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_role"
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -208,9 +207,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:hint="@string/hint_total_lpa"
+                android:hint="@string/salary_text"
                 android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/black"
+                app:startIconDrawable="@drawable/ic_training_charges"
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
