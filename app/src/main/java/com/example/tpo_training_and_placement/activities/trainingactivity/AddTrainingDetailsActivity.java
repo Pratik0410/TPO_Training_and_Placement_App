@@ -19,7 +19,6 @@ public class AddTrainingDetailsActivity extends AppCompatActivity {
             contentsOfTrainingTextInputEditText, eligibilityCriteriaTextInputEditText, trainingDurationTextInputEditText,
             trainingChargesTextInputEditText, registrationDateTextInputEditText, lastDateOfRegistrationTextInputEditText,
             contactDetailsTextInputEditText;
-    public TextInputLayout registrationDateTextInputLayout, lastDateOfRegistrationTextInputLayout;
     public Button uploadButton;
 
     @Override

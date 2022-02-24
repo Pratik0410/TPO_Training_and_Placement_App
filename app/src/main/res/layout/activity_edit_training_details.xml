@@ -20,7 +20,7 @@
             android:layout_height="60dp">
 
             <ImageButton
-                android:id="@+id/id_arrow_back_image_button_in_data_edit_placement_history"
+                android:id="@+id/id_arrow_back_image_button_in_activity_edit_training_details"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                 app:startIconDrawable="@drawable/ic_summary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_about_the_company_or_organization_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_about_the_company_or_organization_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abhaya_libre"
@@ -138,7 +138,7 @@
                 app:startIconDrawable="@drawable/ic_content_of_training">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_content_of_training_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_content_of_training_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abhaya_libre"
@@ -165,7 +165,7 @@
                 app:startIconDrawable="@drawable/ic_key_qualifications">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_eligibility_criteria_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_eligibility_criteria_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -193,7 +193,7 @@
                 app:startIconDrawable="@drawable/ic_training_duration">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_training_duration_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_training_duration_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -221,7 +221,7 @@
                 app:startIconDrawable="@drawable/ic_additional_requirement">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_training_charges_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_training_charges_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -249,7 +249,7 @@
                 app:startIconDrawable="@drawable/ic_registration_date">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_registration_date_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_registration_date_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -277,7 +277,7 @@
                 app:startIconDrawable="@drawable/ic_contact_details">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_last_date_of_registration_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_last_date_of_registration_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -305,7 +305,7 @@
                 app:startIconDrawable="@drawable/ic_link">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_contacr_details_edit_text_in_activity_add_training_details"
+                    android:id="@+id/id_contact_details_edit_text_in_activity_edit_training_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -318,7 +318,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/id_upload_button_in_activity_add_training_details"
+                android:id="@+id/id_upload_button_in_activity_edit_training_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
