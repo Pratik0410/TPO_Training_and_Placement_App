@@ -27,6 +27,7 @@
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_add_training_details.xml" value="0.19635416666666666" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_edit_placement_history.xml" value="0.19635416666666666" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_edit_placement_opportunity.xml" value="0.2" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_edit_training_details.xml" value="0.16304347826086957" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_job_opportunity.xml" value="0.33" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_login.xml" value="0.18432971014492755" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/activity_main.xml" value="0.18432971014492755" />
@@ -60,6 +61,7 @@
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_placement_opportunity.xml" value="0.25" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_pre_placement.xml" value="0.14990942028985507" />
         <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_student_request.xml" value="0.12401315789473684" />
+        <entry key="..\:/Downloads/TPO Final Project/app/src/main/res/layout/ui_training.xml" value="0.16304347826086957" />
         <entry key="..\:/TPO_Training_and_Placement/app/src/main/res/layout/activity_add_placement_opportunity.xml" value="0.22826086956521738" />
         <entry key="..\:/TPO_Training_and_Placement/app/src/main/res/layout/activity_edit_placement_opportunity.xml" value="0.22826086956521738" />
         <entry key="..\:/TPO_Training_and_Placement/app/src/main/res/layout/activity_job_opportunity.xml" value="0.136" />
