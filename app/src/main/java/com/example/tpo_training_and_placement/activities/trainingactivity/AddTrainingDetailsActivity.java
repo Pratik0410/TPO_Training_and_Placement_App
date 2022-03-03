@@ -1,15 +1,25 @@
 package com.example.tpo_training_and_placement.activities.trainingactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
+import com.example.tpo_training_and_placement.activities.preplacementactivity.AddPrePlacementTalkActivity;
+import com.example.tpo_training_and_placement.ui.PrePlacementUi;
+import com.example.tpo_training_and_placement.ui.TrainingUi;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class AddTrainingDetailsActivity extends AppCompatActivity {
@@ -35,7 +45,7 @@ public class AddTrainingDetailsActivity extends AppCompatActivity {
         eligibilityCriteriaTextInputEditText = findViewById(R.id.id_eligibility_criteria_edit_text_in_activity_add_training_details);
         trainingDurationTextInputEditText = findViewById(R.id.id_training_duration_edit_text_in_activity_add_training_details);
         trainingChargesTextInputEditText = findViewById(R.id.id_training_charges_edit_text_in_activity_add_training_details);
-        registrationDateTextInputEditText = findViewById(R.id.id_registration_date_edit_text_in_activity_add_training_details);nameOfCompanyOrOrganizationTextInputEditText = findViewById(R.id.id_name_of_company_or_organization_edit_text_in_activity_add_training_details);nameOfCompanyOrOrganizationTextInputEditText = findViewById(R.id.id_name_of_company_or_organization_edit_text_in_activity_add_training_details);
+        registrationDateTextInputEditText = findViewById(R.id.id_registration_date_edit_text_in_activity_add_training_details);
         lastDateOfRegistrationTextInputEditText = findViewById(R.id.id_last_date_of_registration_edit_text_in_activity_add_training_details);
         contactDetailsTextInputEditText = findViewById(R.id.id_contact_details_edit_text_in_activity_add_training_details);
         uploadButton = findViewById(R.id.id_upload_button_in_activity_add_training_details);
@@ -60,6 +70,30 @@ public class AddTrainingDetailsActivity extends AppCompatActivity {
 
         uploadButton.setOnClickListener(view -> {
 
+            if (nameOfCompanyOrOrganizationTextInputEditText.getText().toString().length() !=0 && aboutCompanyTextInputEditText.getText().toString().length() != 0 && contentsOfTrainingTextInputEditText.getText().toString().length() != 0
+                && eligibilityCriteriaTextInputEditText.getText().toString().length() != 0 && trainingDurationTextInputEditText.getText().toString().length() != 0 && trainingChargesTextInputEditText.getText().toString().length() != 0
+                && registrationDateTextInputEditText.getText().toString().length() != 0 && lastDateOfRegistrationTextInputEditText.getText().toString().length() != 0 && contactDetailsTextInputEditText.getText().toString().length() != 0) {
+                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                    DatabaseReference databaseReference = firebaseDatabase.getReference("Training Activity");
+
+                    Map<String, String> data = new HashMap<>();
+                    data.put("CompanyName", nameOfCompanyOrOrganizationTextInputEditText.getText().toString());
+                    data.put("AboutCompany", aboutCompanyTextInputEditText.getText().toString());
+                    data.put("ContentOfTraining", contentsOfTrainingTextInputEditText.getText().toString());
+                    data.put("EligibilityCriteria", eligibilityCriteriaTextInputEditText.getText().toString());
+                    data.put("TrainingDuration", trainingDurationTextInputEditText.getText().toString());
+                    data.put("TrainingCharges", trainingChargesTextInputEditText.getText().toString());
+                    data.put("RegistrationDate", registrationDateTextInputEditText.getText().toString());
+                    data.put("lastDateOfRegistration", lastDateOfRegistrationTextInputEditText.getText().toString());
+                    data.put("ContactDetails", contactDetailsTextInputEditText.getText().toString());
+
+                    databaseReference.child(nameOfCompanyOrOrganizationTextInputEditText.getText().toString()).setValue(data);
+
+                startActivity(new Intent(AddTrainingDetailsActivity.this, TrainingUi.class));
+                finish();
+            }else{
+                Toast.makeText(AddTrainingDetailsActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
+            }
         });
 
     }
