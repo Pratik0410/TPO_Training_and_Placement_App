@@ -49,9 +49,8 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     public ImageButton arrowBackImageButton;
     public Uri filepath;
     public Bitmap bitmap;
-    public int flagToCheckUploadingImage =0;
+    public int flagToCheckUploadingImage = 0;
     public int productService;
-
 
     @Override
     protected void onResume() {
@@ -120,12 +119,12 @@ public class RegisterCompanyActivity extends AppCompatActivity {
 
         registerButton.setOnClickListener(view -> {
 
-            if (companyNameTextInputEditText.getText().toString().length() !=0 && typeOfCompanyAutoCompleteTextView.getText().toString().length() != 0 && productServiceTextInputEditText.getText().toString().length() !=0
-            && aboutTextInputEditText.getText().toString().length() !=0 && contactDetailsTextInputEditText.getText().toString().length() !=0) {
+            if (Objects.requireNonNull(companyNameTextInputEditText.getText()).toString().length() !=0 && typeOfCompanyAutoCompleteTextView.getText().toString().length() != 0 && Objects.requireNonNull(productServiceTextInputEditText.getText()).toString().length() !=0
+            && Objects.requireNonNull(aboutTextInputEditText.getText()).toString().length() !=0 && Objects.requireNonNull(contactDetailsTextInputEditText.getText()).toString().length() !=0) {
 
                 if (flagToCheckUploadingImage == 5) {
                     FirebaseStorage storage = FirebaseStorage.getInstance();//image1 is your image name
-                    StorageReference uploader = storage.getReference().child(companyNameTextInputEditText.getText().toString());
+                    StorageReference uploader = storage.getReference().child("Companies").child(companyNameTextInputEditText.getText().toString());
 
                     uploader.putFile(filepath)
                             .addOnSuccessListener(taskSnapshot -> {
@@ -160,7 +159,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
     {
         if(requestCode==1 && resultCode==RESULT_OK)
         {
-            filepath=data.getData();
+            filepath= Objects.requireNonNull(data).getData();
             try
             {
                 InputStream inputStream=getContentResolver().openInputStream(filepath);
