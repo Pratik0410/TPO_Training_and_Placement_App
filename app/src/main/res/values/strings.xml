@@ -121,6 +121,7 @@
     <string name="add_placement_history_text">Add Placement History</string>
     <string name="edit_placement_history_text">Edit Placement History</string>
     <string name="view_text">View</string>
+    <string name="upload_file_button">Upload File</string>
 
 
 </resources>
