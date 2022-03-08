@@ -137,10 +137,10 @@ public class RegisterCompanyActivity extends AppCompatActivity {
 
                                     Map<String, String> map = new HashMap();
                                     map.put("CompanyName", companyNameTextInputEditText.getText().toString());
-                                    map.put("Type of Company", typeOfCompanyAutoCompleteTextView.getText().toString());
-                                    map.put("Product or Service of Company", productServiceTextInputEditText.getText().toString());
-                                    map.put("About Company", aboutTextInputEditText.getText().toString());
-                                    map.put("Contact Details", contactDetailsTextInputEditText.getText().toString());
+                                    map.put("TypeofCompany", typeOfCompanyAutoCompleteTextView.getText().toString());
+                                    map.put("ProductorServiceofCompany", productServiceTextInputEditText.getText().toString());
+                                    map.put("AboutCompany", aboutTextInputEditText.getText().toString());
+                                    map.put("ContactDetails", contactDetailsTextInputEditText.getText().toString());
                                     map.put("CompanyLogo", uri.toString());
                                     databaseReference.child(companyNameTextInputEditText.getText().toString()).setValue(map);
                                 });
