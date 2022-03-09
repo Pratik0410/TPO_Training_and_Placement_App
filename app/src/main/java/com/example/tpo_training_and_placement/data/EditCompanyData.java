@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.adapters.RegisteredCompanyAdapter;
-import com.example.tpo_training_and_placement.models.RegisteredCompanyModel;
+import com.example.tpo_training_and_placement.activities.errorhandling.WrapContentLinearLayoutManager;
+import com.example.tpo_training_and_placement.adapters.EditCompanyAdapter;
+import com.example.tpo_training_and_placement.adapters.EditTrainingDetailsAdapter;
+import com.example.tpo_training_and_placement.models.EditCompanyModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,8 +20,9 @@ import java.util.Objects;
 public class EditCompanyData extends AppCompatActivity {
 
     public ImageButton arrowBackImageButton;
-    public RecyclerView registeredCompanyRecyclerView;
-    public RegisteredCompanyAdapter registeredCompanyAdapter;
+    public RecyclerView editCompanyRecyclerView;
+    public EditCompanyAdapter editCompanyAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +32,19 @@ public class EditCompanyData extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_data_edit_company);
-        registeredCompanyRecyclerView = findViewById(R.id.id_select_company_recycler_view_in_data_edit_company);
+        editCompanyRecyclerView = findViewById(R.id.id_select_company_recycler_view_in_data_edit_company);
 
-        registeredCompanyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        editCompanyRecyclerView.setLayoutManager(new WrapContentLinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<RegisteredCompanyModel> options =
-                new FirebaseRecyclerOptions.Builder<RegisteredCompanyModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), RegisteredCompanyModel.class)
+        FirebaseRecyclerOptions<EditCompanyModel> options =
+                new FirebaseRecyclerOptions.Builder<EditCompanyModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), EditCompanyModel.class)
                         .build();
 
-        registeredCompanyAdapter = new RegisteredCompanyAdapter(options);
-        registeredCompanyRecyclerView.setAdapter(registeredCompanyAdapter);
+       editCompanyAdapter = new EditCompanyAdapter(options);
+       editCompanyRecyclerView.setAdapter(editCompanyAdapter);
+
+
 
         arrowBackImageButton.setOnClickListener(view -> finish());
 
@@ -48,29 +53,20 @@ public class EditCompanyData extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        registeredCompanyAdapter.startListening();
+        editCompanyAdapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        registeredCompanyAdapter.stopListening();
+        editCompanyAdapter.stopListening();
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        FirebaseRecyclerOptions<RegisteredCompanyModel> options =
-                new FirebaseRecyclerOptions.Builder<RegisteredCompanyModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), RegisteredCompanyModel.class)
-                        .build();
 
-        registeredCompanyAdapter = new RegisteredCompanyAdapter(options);
-        registeredCompanyRecyclerView.setAdapter(registeredCompanyAdapter);
-
-        arrowBackImageButton.setOnClickListener(view -> finish());
-
-        registeredCompanyAdapter.startListening();
     }
 }
