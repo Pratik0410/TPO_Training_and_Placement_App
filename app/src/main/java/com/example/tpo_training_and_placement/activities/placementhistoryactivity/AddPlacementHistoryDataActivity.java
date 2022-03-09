@@ -139,7 +139,7 @@ public class AddPlacementHistoryDataActivity extends AppCompatActivity {
                     data.put("Company", selectCompanyAutoCompleteTextView.getText().toString());
                     data.put("Designation", designationTextInputEditText.getText().toString());
                     data.put("Salary", salaryTextInputEdittext.getText().toString());
-                    placementHistory.child(yearAutoCompleteTextView.getText().toString()).child(studentNameAutoCompleteTextView.getText().toString()).setValue(data);
+                    placementHistory.child(yearAutoCompleteTextView.getText().toString()).child(selectCompanyAutoCompleteTextView.getText().toString()).child(studentNameAutoCompleteTextView.getText().toString()).setValue(data);
 
                     finish();
                 }else{
