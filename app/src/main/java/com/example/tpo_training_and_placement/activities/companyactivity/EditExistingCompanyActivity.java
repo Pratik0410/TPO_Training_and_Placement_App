@@ -1,8 +1,8 @@
 package com.example.tpo_training_and_placement.activities.companyactivity;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,12 +14,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.activities.trainingactivity.EditTrainingDetailsActivity;
 import com.example.tpo_training_and_placement.ui.CompaniesUi;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -34,7 +32,6 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 import com.squareup.picasso.Picasso;
-
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,6 +39,7 @@ import java.util.Objects;
 
 public class EditExistingCompanyActivity extends AppCompatActivity {
 
+    public ImageButton arrowBackImageButton;
     public Button updateButton, deleteButton;
     public TextInputEditText companyNameTextInputEditText, productServiceTextInputEditText, aboutTextInputEditText, contactDetailsTextInputEditText;
     public AutoCompleteTextView typeOfCompanyAutoCompleteTextView;
@@ -59,9 +57,6 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
         typeOfCompanyAutoCompleteTextView.setAdapter(arrayAdapter);
     }
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +66,7 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-
+        arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_edit_existing_company);
         companyNameTextInputEditText = findViewById(R.id.id_company_name_edit_text_in_activity_edit_existing_company);
         typeOfCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview_in_activity_edit_existing_company);
         productServiceTextInputEditText = findViewById(R.id.id_product_service_edit_text_in_activity_edit_existing_company);
@@ -88,15 +83,14 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
         contactDetailsString = getIntent().getExtras().get("Contact Details").toString();
         companyLogoString = getIntent().getExtras().get("Company Logo").toString();
 
-
         companyNameTextInputEditText.setText(companyNameString);
         typeOfCompanyAutoCompleteTextView.setText(typeOfCompanyString);
         productServiceTextInputEditText.setText(productServiceString);
         aboutTextInputEditText.setText(aboutString);
         contactDetailsTextInputEditText.setText(contactDetailsString);
-        Picasso.get()
-                .load(companyLogoString).into(companyImageView);
+        Picasso.get().load(companyLogoString).into(companyImageView);
 
+        arrowBackImageButton.setOnClickListener(view -> finish());
 
         typeOfCompanyAutoCompleteTextView.setAdapter(arrayAdapter);
 
@@ -108,7 +102,6 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -138,12 +131,12 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
 
         updateButton.setOnClickListener(view -> {
 
-            if (companyNameTextInputEditText.getText().toString().length() !=0 && typeOfCompanyAutoCompleteTextView.getText().toString().length() != 0 && productServiceTextInputEditText.getText().toString().length() !=0
-                    && aboutTextInputEditText.getText().toString().length() !=0 && contactDetailsTextInputEditText.getText().toString().length() !=0) {
+            if (Objects.requireNonNull(companyNameTextInputEditText.getText()).toString().length() !=0 && typeOfCompanyAutoCompleteTextView.getText().toString().length() != 0 && Objects.requireNonNull(productServiceTextInputEditText.getText()).toString().length() !=0
+                    && Objects.requireNonNull(aboutTextInputEditText.getText()).toString().length() !=0 && Objects.requireNonNull(contactDetailsTextInputEditText.getText()).toString().length() !=0) {
                 if (flagToCheckUploadingImage == 5) {
-                    FirebaseStorage storage = FirebaseStorage.getInstance();
-                    StorageReference uploader = storage.getReference().child(companyNameTextInputEditText.getText().toString());
 
+                    FirebaseStorage storage = FirebaseStorage.getInstance();
+                    StorageReference uploader = storage.getReference().child("Companies").child(companyNameTextInputEditText.getText().toString());
 
                     uploader.putFile(filepath)
                             .addOnSuccessListener(taskSnapshot -> {
@@ -153,7 +146,7 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
                                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                                     DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
 
-                                    Map<String, String> map = new HashMap();
+                                    Map<String, String> map = new HashMap<>();
                                     map.put("CompanyName", companyNameTextInputEditText.getText().toString());
                                     map.put("TypeofCompany", typeOfCompanyAutoCompleteTextView.getText().toString());
                                     map.put("ProductorServiceofCompany", productServiceTextInputEditText.getText().toString());
@@ -168,18 +161,18 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
                                     finish();
                                 }).addOnFailureListener(e -> Toast.makeText(EditExistingCompanyActivity.this, "Failed to Update", Toast.LENGTH_SHORT).show());
                             });
+                }
+                else{
 
-
-                }else{
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                     DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
 
-                    Map<String, String> map = new HashMap();
-                    map.put("CompanyName", companyNameTextInputEditText.getText().toString());
+                    Map<String, String> map = new HashMap<>();
+                    map.put("CompanyName", Objects.requireNonNull(companyNameTextInputEditText.getText()).toString());
                     map.put("TypeofCompany", typeOfCompanyAutoCompleteTextView.getText().toString());
-                    map.put("ProductorServiceofCompany", productServiceTextInputEditText.getText().toString());
-                    map.put("AboutCompany", aboutTextInputEditText.getText().toString());
-                    map.put("ContactDetails", contactDetailsTextInputEditText.getText().toString());
+                    map.put("ProductorServiceofCompany", Objects.requireNonNull(productServiceTextInputEditText.getText()).toString());
+                    map.put("AboutCompany", Objects.requireNonNull(aboutTextInputEditText.getText()).toString());
+                    map.put("ContactDetails", Objects.requireNonNull(contactDetailsTextInputEditText.getText()).toString());
                     map.put("CompanyLogo", companyLogoString);
 
                     FirebaseDatabase.getInstance().getReference("List of Companies")
@@ -193,7 +186,18 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
             }
         });
 
-
+        deleteButton.setOnClickListener(view -> {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(EditExistingCompanyActivity.this);
+            alertDialogBuilder.setTitle("Delete").setMessage("Are you Sure?");
+            alertDialogBuilder.setPositiveButton("Yes", (dialog, which) -> FirebaseDatabase.getInstance().getReference("List of Companies").child(companyNameString).removeValue()
+                    .addOnSuccessListener(unused -> FirebaseStorage.getInstance().getReference("List of Companies").child(companyNameString).delete().addOnSuccessListener(unused1 -> {
+                        Toast.makeText(EditExistingCompanyActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }).addOnFailureListener(e -> Toast.makeText(EditExistingCompanyActivity.this, "Failed to Delete", Toast.LENGTH_SHORT).show())));
+            alertDialogBuilder.setNegativeButton("No", (dialogInterface, i) -> Toast.makeText(view.getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show());
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        });
 
     }
 
@@ -202,6 +206,7 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
     {
         if(requestCode==1 && resultCode==RESULT_OK)
         {
+            assert data != null;
             filepath=data.getData();
             try
             {
@@ -215,5 +220,11 @@ public class EditExistingCompanyActivity extends AppCompatActivity {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
