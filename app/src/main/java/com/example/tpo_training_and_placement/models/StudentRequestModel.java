@@ -4,36 +4,78 @@ import android.widget.Button;
 
 public class StudentRequestModel {
 
-    String name, email, mobileNumber, branch;
+    String StudentName, Email, PhoneNumber, Branch, Password, ConfirmPassword, StudentImage;
     Button acceptButton, denyButton;
 
     public StudentRequestModel() {
     }
 
-    public StudentRequestModel(String name, String email, String mobileNumber, String branch,
-                               Button acceptButton, Button denyButton) {
-        this.name = name;
-        this.email = email;
-        this.mobileNumber = mobileNumber;
-        this.branch = branch;
+    public StudentRequestModel(String name, String email, String phoneNumber, String branch, String password, String confirmPassword, String studentImage, Button acceptButton, Button denyButton) {
+        StudentImage = studentImage;
+        StudentName = name;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        Branch = branch;
+        Password = password;
+        ConfirmPassword = confirmPassword;
         this.acceptButton = acceptButton;
         this.denyButton = denyButton;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentImage() {
+        return StudentImage;
+    }
+
+    public void setStudentImage(String studentImage) {
+        StudentImage = studentImage;
+    }
+
+    public String getStudentName() {
+        return StudentName;
+    }
+
+    public void setStudentName(String studentName) {
+        StudentName = studentName;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
-    public String getMobileNumber() {
-        return mobileNumber;
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
     }
 
     public String getBranch() {
-        return branch;
+        return Branch;
+    }
+
+    public void setBranch(String branch) {
+        Branch = branch;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public String getConfirmPassword() {
+        return ConfirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        ConfirmPassword = confirmPassword;
     }
 
     public Button getAcceptButton() {
