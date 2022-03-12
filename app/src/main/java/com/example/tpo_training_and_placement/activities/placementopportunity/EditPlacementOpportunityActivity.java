@@ -97,10 +97,7 @@ public class EditPlacementOpportunityActivity extends AppCompatActivity {
                         Toast.makeText(EditPlacementOpportunityActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
                         finish();
                     }));
-            alertDialogBuilder.setNegativeButton("No", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference("Placement Opportunity")
-                    .child(companyName).removeValue()
-                    .addOnFailureListener(e -> Toast.makeText(EditPlacementOpportunityActivity.this, "Failed to Delete", Toast.LENGTH_SHORT).show()));
-
+            alertDialogBuilder.setNegativeButton("No", (dialogInterface, i) -> Toast.makeText(view.getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show());
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
         });
