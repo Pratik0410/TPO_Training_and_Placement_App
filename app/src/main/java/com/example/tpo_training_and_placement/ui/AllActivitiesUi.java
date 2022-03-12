@@ -9,6 +9,8 @@ import android.os.Bundle;
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.requestactivity.StudentRequestActivity;
 
+import java.util.Objects;
+
 public class AllActivitiesUi extends AppCompatActivity {
 
     public CardView uiAllComponentsCardView;
@@ -26,7 +28,7 @@ public class AllActivitiesUi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_all_activities);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         uiAllComponentsCardView = findViewById(R.id.id_ui_all_components);
         studentRequestCardView = findViewById(R.id.id_student_request_card);
@@ -38,42 +40,21 @@ public class AllActivitiesUi extends AppCompatActivity {
         contactUsCardView = findViewById(R.id.id_contact_us_card);
         placementHistoryCardView = findViewById(R.id.id_placement_history_card);
 
-        studentRequestCardView.setOnClickListener(view -> {
-            startActivity(new Intent(AllActivitiesUi.this, StudentRequestActivity.class));
-        });
+        studentRequestCardView.setOnClickListener(view -> startActivity(new Intent(AllActivitiesUi.this, StudentRequestActivity.class)));
 
-        noticeCardView.setOnClickListener(view -> {
-            startActivity(new Intent(AllActivitiesUi.this, NoticeUi.class));
-        });
+        noticeCardView.setOnClickListener(view -> startActivity(new Intent(AllActivitiesUi.this, NoticeUi.class)));
 
-        trainingCardView.setOnClickListener(view -> {
-            startActivity(new Intent(AllActivitiesUi.this, TrainingUi.class));
-        });
+        trainingCardView.setOnClickListener(view -> startActivity(new Intent(AllActivitiesUi.this, TrainingUi.class)));
 
-        placementOpportunitiesCardView.setOnClickListener(view -> {
-            startActivity(new Intent(AllActivitiesUi.this,PlacementOpportunityUi.class));
-        });
+        placementOpportunitiesCardView.setOnClickListener(view -> startActivity(new Intent(AllActivitiesUi.this,PlacementOpportunityUi.class)));
 
-        companyCardView.setOnClickListener(View -> {
-            startActivity(new Intent(AllActivitiesUi.this,CompaniesUi.class));
+        companyCardView.setOnClickListener(View -> startActivity(new Intent(AllActivitiesUi.this,CompaniesUi.class)));
 
-        });
+        prePlacementCardView.setOnClickListener(View -> startActivity(new Intent(AllActivitiesUi.this,PrePlacementUi.class)));
 
-        prePlacementCardView.setOnClickListener(View -> {
-            startActivity(new Intent(AllActivitiesUi.this,PrePlacementUi.class));
+        placementHistoryCardView.setOnClickListener(view -> startActivity(new Intent(AllActivitiesUi.this, PlacementHistoryUi.class)));
 
-        });
-
-        placementHistoryCardView.setOnClickListener(view -> {
-            startActivity(new Intent(AllActivitiesUi.this, PlacementHistoryUi.class));
-        });
-
-
-        contactUsCardView.setOnClickListener(View -> {
-            startActivity(new Intent(AllActivitiesUi.this,ContactUsUi.class));
-
-        });
-
+        contactUsCardView.setOnClickListener(View -> startActivity(new Intent(AllActivitiesUi.this,ContactUsUi.class)));
 
     }
 }

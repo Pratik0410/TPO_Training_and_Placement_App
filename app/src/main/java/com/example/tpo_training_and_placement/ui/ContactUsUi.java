@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.example.tpo_training_and_placement.R;
 
+import java.util.Objects;
+
 public class ContactUsUi extends AppCompatActivity {
 
     @Override
@@ -13,6 +15,6 @@ public class ContactUsUi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_contact_us);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
     }
 }

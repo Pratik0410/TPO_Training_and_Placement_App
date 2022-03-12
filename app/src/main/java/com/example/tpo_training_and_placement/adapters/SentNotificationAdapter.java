@@ -32,12 +32,12 @@ public class SentNotificationAdapter extends FirebaseRecyclerAdapter<SentNotific
         return new ViewHolder(view);
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
         TextView dateTextView, noticeTextView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            dateTextView = (TextView) itemView.findViewById(R.id.id_notification_date);
-            noticeTextView = (TextView) itemView.findViewById(R.id.id_notice);
+            dateTextView = itemView.findViewById(R.id.id_notification_date);
+            noticeTextView = itemView.findViewById(R.id.id_notice);
         }
     }
 

@@ -10,6 +10,8 @@ import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.preplacementactivity.AddPrePlacementTalkActivity;
 import com.example.tpo_training_and_placement.data.PreviousPrePlacementTalksData;
 
+import java.util.Objects;
+
 public class PrePlacementUi extends AppCompatActivity {
 
     public CardView prePlacementUiCardView;
@@ -21,7 +23,7 @@ public class PrePlacementUi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_pre_placement);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         prePlacementUiCardView = findViewById(R.id.id_ui_pre_placement);
         addPrePlacementTalksCardView = findViewById(R.id.ID_Card_AddPrePlacement);

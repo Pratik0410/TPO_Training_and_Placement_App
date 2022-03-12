@@ -29,10 +29,6 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public ImageButton backPressImageButton;
     public RecyclerView studentDataRecyclerView;
     public StudentNotificationCardAdapter studentNotificationCardAdapter;
@@ -63,8 +59,9 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -75,16 +72,14 @@ public class StudentListBottomSheetFragment extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.fragment_student_list_bottom_sheet, container, false);
 
         backPressImageButton = view.findViewById(R.id.back_pressed_button);
-        backPressImageButton.setOnClickListener(view1 -> {
-            onStop();
-        });
+        backPressImageButton.setOnClickListener(view1 -> onStop());
 
-        studentDataRecyclerView = (RecyclerView) view.findViewById(R.id.id_recycler_view_in_fragment);
+        studentDataRecyclerView = view.findViewById(R.id.id_recycler_view_in_fragment);
         studentDataRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<StudentNotificationCardModel> options =
                 new FirebaseRecyclerOptions.Builder<StudentNotificationCardModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Student Data"), StudentNotificationCardModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Students"), StudentNotificationCardModel.class)
                         .build();
 
         studentNotificationCardAdapter = new StudentNotificationCardAdapter(options);

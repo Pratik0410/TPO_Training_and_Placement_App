@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.data.SelectPlacementCompanyData;
-import com.example.tpo_training_and_placement.ui.PlacementOpportunityUi;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,7 +23,7 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
     public String companyName, companyLogo;
     public MaterialTextView companyNameMaterialTextView;
     public ImageButton arrowBackImageButton;
-    public EditText roleTextInputLayout,locationTextInputLayout, summaryTextInputLayout, keyQualificationTextInputlayout,
+    public EditText roleTextInputLayout,locationTextInputLayout, summaryTextInputLayout, keyQualificationTextInputLayout,
            jobDescriptionTextInputLayout, additionalRequirementsTextInputLayout, linkForApplyingTextInputLayout;
     public Button uploadButton;
 
@@ -40,7 +39,7 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
         roleTextInputLayout = findViewById(R.id.id_role_edit_text_in_activity_edit_placement_opportunity);
         locationTextInputLayout = findViewById(R.id.id_location_edit_text_in_activity_add_placement_opportunity);
         summaryTextInputLayout = findViewById(R.id.id_summary_edit_text_in_activity_add_placement_opportunity);
-        keyQualificationTextInputlayout = findViewById(R.id.id_key_qualification_edit_text_in_activity_add_placement_opportunity);
+        keyQualificationTextInputLayout = findViewById(R.id.id_key_qualification_edit_text_in_activity_add_placement_opportunity);
         jobDescriptionTextInputLayout = findViewById(R.id.id_job_description_edit_text_in_activity_add_placement_opportunity);
         additionalRequirementsTextInputLayout = findViewById(R.id.id_additional_requirements_edit_text_in_activity_add_placement_opportunity);
         linkForApplyingTextInputLayout = findViewById(R.id.id_link_for_applying_edit_text_in_activity_add_placement_opportunity);
@@ -58,18 +57,18 @@ public class AddPlacementOpportunityActivity extends AppCompatActivity {
 
         uploadButton.setOnClickListener(view -> {
             if(companyNameMaterialTextView.getText().toString().length() != 0 && roleTextInputLayout.getText().toString().length() != 0 && locationTextInputLayout.getText().toString().length() != 0
-                    && summaryTextInputLayout.getText().toString().length() != 0 && keyQualificationTextInputlayout.getText().toString().length() != 0 && jobDescriptionTextInputLayout.getText().toString().length() != 0
+                    && summaryTextInputLayout.getText().toString().length() != 0 && keyQualificationTextInputLayout.getText().toString().length() != 0 && jobDescriptionTextInputLayout.getText().toString().length() != 0
                     && additionalRequirementsTextInputLayout.getText().toString().length() != 0 && linkForApplyingTextInputLayout.getText().toString().length() != 0)
             {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference placementOpportunity = database.getReference("Placement Opportunity");
 
-                Map<String, String> data = new HashMap();
+                Map<String, String> data = new HashMap<>();
                 data.put("CompanyName", companyNameMaterialTextView.getText().toString());
                 data.put("Role", roleTextInputLayout.getText().toString());
                 data.put("Location", locationTextInputLayout.getText().toString());
                 data.put("Summary", summaryTextInputLayout.getText().toString());
-                data.put("KeyQualification", keyQualificationTextInputlayout.getText().toString());
+                data.put("KeyQualification", keyQualificationTextInputLayout.getText().toString());
                 data.put("JobDescription", jobDescriptionTextInputLayout.getText().toString());
                 data.put("AdditionalRequirements", additionalRequirementsTextInputLayout.getText().toString());
                 data.put("LinkForApplying", linkForApplyingTextInputLayout.getText().toString());

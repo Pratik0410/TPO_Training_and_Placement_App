@@ -134,7 +134,7 @@ public class RegisterCompanyActivity extends AppCompatActivity {
                                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                                     DatabaseReference databaseReference = firebaseDatabase.getReference("List of Companies");
 
-                                    Map<String, String> map = new HashMap();
+                                    Map<String, String> map = new HashMap<>();
                                     map.put("CompanyName", companyNameTextInputEditText.getText().toString());
                                     map.put("TypeofCompany", typeOfCompanyAutoCompleteTextView.getText().toString());
                                     map.put("ProductorServiceofCompany", productServiceTextInputEditText.getText().toString());

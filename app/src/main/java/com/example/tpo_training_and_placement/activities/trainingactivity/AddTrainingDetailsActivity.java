@@ -9,15 +9,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.activities.preplacementactivity.AddPrePlacementTalkActivity;
-import com.example.tpo_training_and_placement.ui.PrePlacementUi;
 import com.example.tpo_training_and_placement.ui.TrainingUi;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -70,9 +66,9 @@ public class AddTrainingDetailsActivity extends AppCompatActivity {
 
         uploadButton.setOnClickListener(view -> {
 
-            if (nameOfCompanyOrOrganizationTextInputEditText.getText().toString().length() !=0 && aboutCompanyTextInputEditText.getText().toString().length() != 0 && contentsOfTrainingTextInputEditText.getText().toString().length() != 0
-                && eligibilityCriteriaTextInputEditText.getText().toString().length() != 0 && trainingDurationTextInputEditText.getText().toString().length() != 0 && trainingChargesTextInputEditText.getText().toString().length() != 0
-                && registrationDateTextInputEditText.getText().toString().length() != 0 && lastDateOfRegistrationTextInputEditText.getText().toString().length() != 0 && contactDetailsTextInputEditText.getText().toString().length() != 0) {
+            if (Objects.requireNonNull(nameOfCompanyOrOrganizationTextInputEditText.getText()).toString().length() !=0 && Objects.requireNonNull(aboutCompanyTextInputEditText.getText()).toString().length() != 0 && Objects.requireNonNull(contentsOfTrainingTextInputEditText.getText()).toString().length() != 0
+                && Objects.requireNonNull(eligibilityCriteriaTextInputEditText.getText()).toString().length() != 0 && Objects.requireNonNull(trainingDurationTextInputEditText.getText()).toString().length() != 0 && Objects.requireNonNull(trainingChargesTextInputEditText.getText()).toString().length() != 0
+                && Objects.requireNonNull(registrationDateTextInputEditText.getText()).toString().length() != 0 && Objects.requireNonNull(lastDateOfRegistrationTextInputEditText.getText()).toString().length() != 0 && Objects.requireNonNull(contactDetailsTextInputEditText.getText()).toString().length() != 0) {
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                     DatabaseReference databaseReference = firebaseDatabase.getReference("Training Activity");
 

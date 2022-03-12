@@ -5,13 +5,12 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.placementhistoryactivity.AddPlacementHistoryDataActivity;
 import com.example.tpo_training_and_placement.data.EditPlacementHistoryData;
 import com.example.tpo_training_and_placement.data.ViewPlacementHistoryData;
+
+import java.util.Objects;
 
 public class PlacementHistoryUi extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class PlacementHistoryUi extends AppCompatActivity {
         editPlacementHistoryCardView = findViewById(R.id.id_edit_placement_history_cardview_in_ui_placement_history);
         viewPlacementHistoryCardView = findViewById(R.id.id_view_placement_history_cardview_in_ui_placement_history);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         placementHistoryYearUiCardView.setBackgroundResource(R.drawable.top_card_radius);
 

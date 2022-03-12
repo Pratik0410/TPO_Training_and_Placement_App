@@ -3,6 +3,7 @@ package com.example.tpo_training_and_placement.activities;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -10,9 +11,11 @@ import android.os.Bundle;
 
 import com.example.tpo_training_and_placement.R;
 
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     Timer welcomePageTimer;
@@ -36,7 +39,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         },3800);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#000000"));
 

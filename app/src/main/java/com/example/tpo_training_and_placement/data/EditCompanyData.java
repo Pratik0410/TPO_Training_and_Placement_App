@@ -1,20 +1,15 @@
 package com.example.tpo_training_and_placement.data;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.ImageButton;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.errorhandling.WrapContentLinearLayoutManager;
 import com.example.tpo_training_and_placement.adapters.EditCompanyAdapter;
-import com.example.tpo_training_and_placement.adapters.EditTrainingDetailsAdapter;
 import com.example.tpo_training_and_placement.models.EditCompanyModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Objects;
 
 public class EditCompanyData extends AppCompatActivity {
@@ -22,7 +17,6 @@ public class EditCompanyData extends AppCompatActivity {
     public ImageButton arrowBackImageButton;
     public RecyclerView editCompanyRecyclerView;
     public EditCompanyAdapter editCompanyAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +38,7 @@ public class EditCompanyData extends AppCompatActivity {
        editCompanyAdapter = new EditCompanyAdapter(options);
        editCompanyRecyclerView.setAdapter(editCompanyAdapter);
 
-
-
-        arrowBackImageButton.setOnClickListener(view -> finish());
+       arrowBackImageButton.setOnClickListener(view -> finish());
 
     }
 
@@ -60,13 +52,17 @@ public class EditCompanyData extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         editCompanyAdapter.stopListening();
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        editCompanyAdapter.startListening();
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

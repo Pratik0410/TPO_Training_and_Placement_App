@@ -53,9 +53,9 @@ public class AddPrePlacementTalkActivity extends AppCompatActivity {
             simpleDateFormat = new SimpleDateFormat(dateFormat, Locale.US);
             dateString = simpleDateFormat.format(calendar.getTime());
 
-            if(companyNameTextInputEditText.getText().toString().length()!=0 && detailsTextInputEditText.getText().toString().length()!=0&&linkTextInputEditText.getText().toString().length()!=0){
+            if(Objects.requireNonNull(companyNameTextInputEditText.getText()).toString().length()!=0 && Objects.requireNonNull(detailsTextInputEditText.getText()).toString().length()!=0&& Objects.requireNonNull(linkTextInputEditText.getText()).toString().length()!=0){
 
-                Map map = new HashMap();
+                Map<String, String> map = new HashMap<>();
                 map.put("CompanyName",companyNameTextInputEditText.getText().toString());
                 map.put("Details",detailsTextInputEditText.getText().toString());
                 map.put("Link",linkTextInputEditText.getText().toString());
