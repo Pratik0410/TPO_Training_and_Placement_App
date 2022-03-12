@@ -122,6 +122,9 @@
     <string name="edit_placement_history_text">Edit Placement History</string>
     <string name="view_text">View</string>
     <string name="upload_file_button">Upload File</string>
+    <string name="type_of_company_text">Type of Company</string>
+    <string name="product_service_of_company_text">Product/Service of Company</string>
+    <string name="notify_all_text">Notify All</string>
 
 
 </resources>
