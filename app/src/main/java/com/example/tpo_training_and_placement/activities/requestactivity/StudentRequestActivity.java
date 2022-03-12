@@ -13,6 +13,8 @@ import com.example.tpo_training_and_placement.models.StudentRequestModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 public class StudentRequestActivity extends AppCompatActivity {
 
     public CardView requestUiCardView;
@@ -24,14 +26,14 @@ public class StudentRequestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_student_request);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         requestUiCardView = findViewById(R.id.id_ui_student_request);
         requestUiCardView.setBackgroundResource(R.drawable.top_card_radius);
 
         FirebaseRecyclerOptions<StudentRequestModel> options =
                 new FirebaseRecyclerOptions.Builder<StudentRequestModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference(), StudentRequestModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Student Request"), StudentRequestModel.class)
                         .build();
 
         requestRecyclerView = findViewById(R.id.id_student_request_recycler_view);
@@ -40,5 +42,29 @@ public class StudentRequestActivity extends AppCompatActivity {
         studentRequestAdapter = new StudentRequestAdapter(options);
         requestRecyclerView.setAdapter(studentRequestAdapter);
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        studentRequestAdapter.startListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        studentRequestAdapter.stopListening();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        studentRequestAdapter.startListening();
     }
 }
