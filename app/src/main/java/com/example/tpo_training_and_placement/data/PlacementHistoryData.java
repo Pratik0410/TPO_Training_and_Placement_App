@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.example.tpo_training_and_placement.R;
 
+import java.util.Objects;
+
 public class PlacementHistoryData extends AppCompatActivity {
 
     @Override
@@ -13,6 +15,7 @@ public class PlacementHistoryData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.data_placement_history);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
     }
 }

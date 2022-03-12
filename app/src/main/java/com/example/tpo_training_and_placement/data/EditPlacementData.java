@@ -5,15 +5,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.TextView;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.activities.errorhandling.WrapContentLinearLayoutManager;
 import com.example.tpo_training_and_placement.adapters.EditPlacementOpportunityAdapter;
 import com.example.tpo_training_and_placement.models.EditPlacementOpportunityModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Objects;
 
 public class EditPlacementData extends AppCompatActivity {

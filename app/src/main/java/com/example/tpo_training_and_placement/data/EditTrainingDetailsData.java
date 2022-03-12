@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.tpo_training_and_placement.R;
@@ -13,6 +12,8 @@ import com.example.tpo_training_and_placement.adapters.EditTrainingDetailsAdapte
 import com.example.tpo_training_and_placement.models.EditTrainingDetailsModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class EditTrainingDetailsData extends AppCompatActivity {
 
@@ -25,7 +26,7 @@ public class EditTrainingDetailsData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.data_edit_training_details);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         arrowImageButton = findViewById(R.id.id_arrow_back_image_button_in_data_edit_placement_history);
         editTrainingDetailsRecyclerView = findViewById(R.id.id_edit_training_details_recycler_view_in_data_edit_training_details);

@@ -51,7 +51,7 @@ public class SendNotificationToAllActivity extends AppCompatActivity {
 
             if(dateEditText.getText().toString().length() > 0 && enterNoticeEditText.getText().toString().length() > 0){
 
-                Map<String,String> data = new HashMap();
+                Map<String,String> data = new HashMap<>();
                 data.put("Date", dateEditText.getText().toString());
                 data.put("Notice", enterNoticeEditText.getText().toString());
                 databaseReference.child(dateEditText.getText().toString()).setValue(data);

@@ -10,6 +10,8 @@ import com.example.tpo_training_and_placement.activities.noticeactivity.SendNoti
 import com.example.tpo_training_and_placement.activities.noticeactivity.SendNotificationToAllActivity;
 import com.example.tpo_training_and_placement.data.SentNotificationsData;
 
+import java.util.Objects;
+
 public class NoticeUi extends AppCompatActivity {
 
     public CardView noticeUiCardView;
@@ -22,7 +24,7 @@ public class NoticeUi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_notice);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         noticeUiCardView = findViewById(R.id.id_ui_notice);
         sendNotificationToAllCardView = findViewById(R.id.ID_CardNotifyAll);

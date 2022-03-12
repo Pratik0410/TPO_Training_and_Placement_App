@@ -4,10 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.models.StudentNotificationCardModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -21,7 +19,7 @@ public class StudentNotificationCardAdapter extends FirebaseRecyclerAdapter<Stud
 
     @Override
     protected void onBindViewHolder(@NonNull StudentNotificationCardAdapter.ViewHolder holder, int position, @NonNull StudentNotificationCardModel model) {
-        holder.nameTextView.setText(model.getName());
+        holder.nameTextView.setText(model.getStudentName());
         holder.branchTextView.setText(model.getBranch());
     }
 
@@ -32,12 +30,12 @@ public class StudentNotificationCardAdapter extends FirebaseRecyclerAdapter<Stud
        return new ViewHolder(view);
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
         TextView nameTextView, branchTextView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTextView = (TextView) itemView.findViewById(R.id.id_student_name);
-            branchTextView = (TextView) itemView.findViewById(R.id.id_student_branch);
+            nameTextView = itemView.findViewById(R.id.id_student_name);
+            branchTextView = itemView.findViewById(R.id.id_student_branch);
         }
     }
 }

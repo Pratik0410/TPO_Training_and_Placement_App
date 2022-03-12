@@ -10,17 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tpo_training_and_placement.R;
-import com.example.tpo_training_and_placement.activities.placementopportunity.EditPlacementOpportunityActivity;
 import com.example.tpo_training_and_placement.activities.trainingactivity.EditTrainingDetailsActivity;
 import com.example.tpo_training_and_placement.models.EditTrainingDetailsModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
-
 public class EditTrainingDetailsAdapter extends FirebaseRecyclerAdapter<EditTrainingDetailsModel, EditTrainingDetailsAdapter.ViewHolder> {
-
 
     public EditTrainingDetailsAdapter(@NonNull FirebaseRecyclerOptions<EditTrainingDetailsModel> options) {
         super(options);
