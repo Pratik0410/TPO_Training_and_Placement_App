@@ -1,19 +1,13 @@
 package com.example.tpo_training_and_placement.activities.noticeactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.fragment.StudentListBottomSheetFragment;
 import com.google.android.material.datepicker.MaterialDatePicker;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class SendNotificationToStudentActivity extends AppCompatActivity {
@@ -49,14 +43,6 @@ public class SendNotificationToStudentActivity extends AppCompatActivity {
 
             StudentListBottomSheetFragment studentListBottomSheetFragment = new StudentListBottomSheetFragment();
             studentListBottomSheetFragment.show(getSupportFragmentManager(),studentListBottomSheetFragment.getTag());
-
-            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-            DatabaseReference databaseReference = firebaseDatabase.getReference("Student Notice");
-
-//            Map<String,String> data = new HashMap();
-//            data.put("Date",studentDateEditText.getText().toString());
-//            data.put("Notice",studentNoticeEditText.getText().toString());
-//            databaseReference.child(studentDateEditText.getText().toString()).setValue(data);
 
         });
     }

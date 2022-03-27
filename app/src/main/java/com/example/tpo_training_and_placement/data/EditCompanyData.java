@@ -57,6 +57,15 @@ public class EditCompanyData extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        FirebaseRecyclerOptions<EditCompanyModel> options =
+                new FirebaseRecyclerOptions.Builder<EditCompanyModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("List of Companies"), EditCompanyModel.class)
+                        .build();
+
+        editCompanyAdapter = new EditCompanyAdapter(options);
+        editCompanyRecyclerView.setAdapter(editCompanyAdapter);
+
         editCompanyAdapter.startListening();
     }
 
