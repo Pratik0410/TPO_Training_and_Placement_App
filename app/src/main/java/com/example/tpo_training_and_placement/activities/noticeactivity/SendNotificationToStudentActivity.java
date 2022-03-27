@@ -2,7 +2,6 @@ package com.example.tpo_training_and_placement.activities.noticeactivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.example.tpo_training_and_placement.R;
 import com.example.tpo_training_and_placement.fragment.StudentListBottomSheetFragment;
 import com.google.android.gms.tasks.Task;
@@ -132,11 +130,7 @@ public class SendNotificationToStudentActivity extends AppCompatActivity {
                     databaseReference.child(studentDateEditText.getText().toString()).setValue(data);
                 }
             }
-
-
-
-
-
+          
         });
     }
 
