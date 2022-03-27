@@ -65,6 +65,17 @@ public class StudentRequestActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        FirebaseRecyclerOptions<StudentRequestModel> options =
+                new FirebaseRecyclerOptions.Builder<StudentRequestModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Student Request"), StudentRequestModel.class)
+                        .build();
+
+        requestRecyclerView = findViewById(R.id.id_student_request_recycler_view);
+        requestRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        studentRequestAdapter = new StudentRequestAdapter(options);
+        requestRecyclerView.setAdapter(studentRequestAdapter);
+
         studentRequestAdapter.startListening();
     }
 }
