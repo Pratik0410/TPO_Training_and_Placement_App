@@ -36,7 +36,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="03dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="Notify All"
+                android:text="@string/notify_all_text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -63,7 +63,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -95,7 +95,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
-                    android:id="@+id/textView19"
+                    android:id="@+id/id_upload_file_text_view_in_activity_send_notification_to_all"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"

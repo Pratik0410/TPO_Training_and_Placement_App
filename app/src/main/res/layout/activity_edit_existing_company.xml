@@ -27,7 +27,7 @@
                 android:layout_marginStart="20dp"
                 android:background="@color/black"
                 android:src="@drawable/arrow_back"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/abhaya_libre"
-                        android:hint="Type of Company"
+                        android:hint="@string/type_of_company_text"
                         android:inputType="none"
                         android:textColorHint="@color/black"
                         android:textSize="20sp" />
@@ -130,7 +130,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/abhaya_libre"
-                    android:hint="Product/Service of Company"
+                    android:hint="@string/product_service_of_company_text"
                     app:boxStrokeColor="@color/black"
                     app:hintTextColor="@color/black"
                     app:startIconDrawable="@drawable/ic_product">
@@ -222,7 +222,8 @@
                         android:backgroundTint="@color/black"
                         android:fontFamily="@font/abhaya_libre"
                         android:text="@string/update_button"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        style="?android:attr/buttonBarButtonStyle" />
 
                     <Button
                         android:id="@+id/id_upload_button_in_activity_edit_existing_company"
@@ -234,7 +235,8 @@
                         android:backgroundTint="@color/black"
                         android:fontFamily="@font/abhaya_libre"
                         android:text="@string/delete_button"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        style="?android:attr/buttonBarButtonStyle" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
