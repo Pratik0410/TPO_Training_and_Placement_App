@@ -44,11 +44,11 @@ public class AddPlacementHistoryDataActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        yearAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview_in_edit_existing_company2);
-        studentNameAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview_in_edit_existing_company3);
+        yearAutoCompleteTextView = findViewById(R.id.id_year_auto_complete_textview_in_activity_add_placement_history_data);
+        studentNameAutoCompleteTextView = findViewById(R.id.id_student_name_auto_complete_textview_in_activity_add_placement_history_data);
         textInputLayout = findViewById(R.id.id_text_input_layout);
-        selectCompanyAutoCompleteTextView = findViewById(R.id.id_auto_complete_textview_in_edit_existing_company);
-        designationTextInputEditText = findViewById(R.id.id_average_lpa_edit_text_in_activity_add_placement_history_data);
+        selectCompanyAutoCompleteTextView = findViewById(R.id.id_select_company_auto_complete_textview_in_activity_add_placement_history_data);
+        designationTextInputEditText = findViewById(R.id.id_designation_edit_text_in_activity_add_placement_history_data);
         salaryTextInputEdittext = findViewById(R.id.id_about_edit_text_in_edit_existing_company);
         submitButton = findViewById(R.id.id_upload_button_in_activity_add_placement_opportunity);
         arrowBackImageButton = findViewById(R.id.id_arrow_back_image_button_in_activity_add_placement_history_data);

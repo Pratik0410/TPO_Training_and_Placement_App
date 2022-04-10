@@ -64,6 +64,16 @@
             android:orientation="vertical">
 
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView18"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/student_image"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -112,7 +122,7 @@
                     app:hintTextColor="@color/black">
 
                     <AutoCompleteTextView
-                        android:id="@+id/id_auto_complete_textview_in_edit_existing_company2"
+                        android:id="@+id/id_year_auto_complete_textview_in_activity_add_placement_history_data"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/abhaya_libre"
@@ -131,19 +141,47 @@
                 android:fontFamily="@font/abhaya_libre"
                 android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/black"
-                app:startIconDrawable="@drawable/ic_student_name"
-                app:hintTextColor="@color/black">
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/ic_student_name">
 
-            <AutoCompleteTextView
-                android:id="@+id/id_auto_complete_textview_in_edit_existing_company3"
+                <AutoCompleteTextView
+                    android:id="@+id/id_student_name_auto_complete_textview_in_activity_add_placement_history_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:hint="@string/student_name_text"
+                    android:inputType="none"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:hint="@string/student_name_text"
-                android:inputType="none"
+                android:hint="@string/enter_branch_text"
                 android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/ic_enter_branch">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_enter_branch_edit_text_in_activity_add_placement_history_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abhaya_libre"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:padding="15dp"
+                    android:textColorHint="#A63A3535"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    app:boxStrokeColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -159,7 +197,7 @@
                 app:hintTextColor="@color/black">
 
                 <AutoCompleteTextView
-                    android:id="@+id/id_auto_complete_textview_in_edit_existing_company"
+                    android:id="@+id/id_select_company_auto_complete_textview_in_activity_add_placement_history_data"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
@@ -186,7 +224,7 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_average_lpa_edit_text_in_activity_add_placement_history_data"
+                    android:id="@+id/id_designation_edit_text_in_activity_add_placement_history_data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -214,7 +252,7 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_about_edit_text_in_edit_existing_company"
+                    android:id="@+id/id_salary_edit_text_in_activity_add_placement_history_data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -229,7 +267,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/id_upload_button_in_activity_add_placement_opportunity"
+                android:id="@+id/id_submit_button_in_activity_add_placement_history_data"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
