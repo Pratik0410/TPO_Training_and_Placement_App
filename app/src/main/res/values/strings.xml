@@ -126,6 +126,7 @@
     <string name="product_service_of_company_text">Product/Service of Company</string>
     <string name="notify_all_text">Notify All</string>
     <string name="enter_branch_text">Enter Branch</string>
+    <string name="student_request_text">Student Request</string>
 
 
 </resources>
