@@ -1,174 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardElevation="10dp">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessParent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/sr_no_text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/student_image" />
+
+        <LinearLayout
+            android:layout_width="405dp"
+            android:layout_height="244dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView17">
 
             <TextView
                 android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/hint_company_name"
                 android:padding="5dp"
+                android:text="@string/student_name_text"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView23"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/artificial_intelligence_machine_learning_text"
                 android:padding="5dp"
+                android:text="@string/branch_text"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView24"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/computer_technology_text"
                 android:padding="5dp"
+                android:text="@string/designation_text"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView25"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/mechanical_engineering_text"
                 android:padding="5dp"
+                android:text="@string/package_text"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView27"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/information_technology_text"
                 android:padding="5dp"
+                android:text="TextView"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/chemical_engineering_text"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/civil_engineering_text"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/electrical_engineering_text"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/total_text"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp"
-                tools:ignore="TextContrastCheck" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/hint_total_lpa"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/abhaya_libre"
-                android:gravity="center"
-                android:hint="@string/hint_average_lpa"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="18sp" />
-
-        </TableRow>
-
-    </LinearLayout>
-</HorizontalScrollView>
+</androidx.cardview.widget.CardView>
