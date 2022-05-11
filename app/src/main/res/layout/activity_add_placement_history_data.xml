@@ -65,7 +65,7 @@
 
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/id_upload_istudent_image_imageview_in_activity_add_placement_history_data"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
