@@ -6,7 +6,7 @@
     android:layout_marginStart="30dp"
     android:layout_marginEnd="30dp"
     android:layout_marginBottom="20dp"
-    android:backgroundTint="#120B0B0B"
+    android:background="@drawable/border_for_textview"
     android:orientation="vertical"
     app:cardCornerRadius="20dp">
 
